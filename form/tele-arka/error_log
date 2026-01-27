@@ -1,0 +1,69 @@
+[28-May-2025 14:18:15 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[28-May-2025 14:18:33 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/tele-chatbox.php on line 5
+[29-May-2025 06:33:01 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[29-May-2025 08:36:03 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[04-Jun-2025 08:27:17 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[04-Jun-2025 16:51:28 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Jun-2025 11:52:21 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[20-Jun-2025 03:15:00 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[21-Jun-2025 19:23:55 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[24-Jun-2025 03:47:59 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[28-Jun-2025 02:56:12 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/tele-chatbox.php on line 5
+[01-Jul-2025 20:40:12 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[04-Jul-2025 09:12:46 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[04-Jul-2025 09:22:53 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[22-Jul-2025 10:12:32 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[01-Aug-2025 01:50:03 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[01-Aug-2025 19:07:01 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/49.12.73.102/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[01-Aug-2025 22:27:06 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[02-Aug-2025 12:48:27 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/66.249.66.9/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[05-Aug-2025 14:09:38 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/149.56.150.6/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[07-Aug-2025 18:47:08 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/43.135.132.224/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[07-Aug-2025 18:57:04 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/223.178.80.33/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[07-Aug-2025 20:38:41 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/66.249.66.11/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[10-Aug-2025 20:44:06 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/66.249.66.11/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[10-Aug-2025 22:01:28 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/104.171.153.215/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[14-Aug-2025 22:31:35 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/66.249.66.9/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[15-Aug-2025 16:13:54 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/66.249.66.10/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[17-Aug-2025 23:47:45 UTC] PHP Warning:  file_get_contents(https://ipinfo.io/66.249.66.11/json): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 31
+[26-Aug-2025 10:03:31 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[03-Sep-2025 17:47:49 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[04-Sep-2025 09:24:50 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:13:49 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:16 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:16 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:18 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:20 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:22 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:22 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:22 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:23 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:23 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:14:23 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:08 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:11 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:13 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:14 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:15 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:21 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:22 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:22 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:23 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[05-Sep-2025 11:17:23 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[07-Sep-2025 12:19:29 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[07-Sep-2025 16:42:07 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[08-Sep-2025 07:54:33 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/get-location.php on line 5
+[08-Sep-2025 11:27:19 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/tele-chatbox.php on line 5
+[25-Sep-2025 09:11:29 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/tele-chatbox.php on line 5
+[21-Nov-2025 00:17:26 UTC] PHP Notice:  Undefined index: HTTP_ORIGIN in /home/arkakids/playabacusindia.com/form/tele-arka/tele-chatbox.php on line 5

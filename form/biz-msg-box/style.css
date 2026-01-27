@@ -1,0 +1,495 @@
+/* bottom menu icons start */
+:root {
+    --main--icon-color: white;
+    --call-icon-bg: darkblue;
+    --email-icon-bg: rgb(17, 193, 70);
+    --url-icon-bg: rgb(216, 61, 45);
+    --tele-icon-bg: rgb(40, 164, 226);
+    --call-ani-color: darkblue;
+    --tele-ani-color: rgb(40, 164, 226);
+    --url-ani-color: rgb(216, 61, 45);
+    --email-ani-color: darkgreen;
+    --animation-width: 50px;
+    --animation-height: 50px;
+    --animation-start-range: 5px;
+    --animation-end-range: 30px;
+
+    /* --call-icon-box-shadow: 0 0 10px;
+                --tele-icon-box-shadow: 0 0 10px; */
+}
+
+
+.bottom-call-tel.btn-animation::before {
+    /* content: ""; */
+    width: var(--animation-width);
+    height: var(--animation-height);
+    margin-top: 2px;
+    position: absolute;
+    border-radius: 50%;
+    padding: 25px;
+    border-style: solid;
+    border-width: 5px;
+    opacity: 0.75;
+    animation-name: animation-border;
+    animation-duration: 2s;
+    box-sizing: unset;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+}
+
+.bottom-call-tel.btn-animation1::before {
+    border-color: transparent var(--call-ani-color) transparent var(--call-ani-color);
+}
+
+.btn-animation2::before {
+    border-color: transparent var(--tele-ani-color) transparent var(--tele-ani-color);
+}
+
+.btn-animation3::before {
+    border-color: transparent var(--email-ani-color) transparent var(--email-ani-color);
+}
+
+.btn-animation4::before {
+    border-color: transparent var(--url-ani-color) transparent var(--url-ani-color);
+}
+
+
+@keyframes animation-border {
+    0% {
+        padding: var(--animation-start-range);
+        padding: var(--animation-start-range);
+        opacity: 0.75;
+    }
+
+    75% {
+        padding: var(--animation-end-range);
+        padding: var(--animation-end-range);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#bottom-operator {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    z-index: 999999;
+
+}
+
+.bottom-call-tel.call-container {
+    z-index: 999;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: var(--main-icon-font-size);
+    color: var(--main--icon-color);
+    background: var(--call-icon-bg);
+    box-shadow: var(--call-icon-box-shadow);
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.bottom-call-tel.telegram-container {
+    z-index: 999;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: var(--main-icon-font-size);
+    color: var(--main--icon-color);
+    background: var(--tele-icon-bg);
+    box-shadow: var(--tele-icon-box-shadow);
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.bottom-call-tel.call-container span {
+    position: absolute;
+    left: calc(100% + 10px);
+    width: max-content;
+    padding: 5px 30px;
+    color: var(--main--icon-color);
+    background: var(--call-icon-bg);
+    border-radius: 100px;
+    font-size: 14px;
+    opacity: 0;
+    transition: .4s;
+    transform: translateX(-30px);
+    pointer-events: none;
+}
+
+.bottom-call-tel.telegram-container span {
+    position: absolute;
+    left: calc(100% + 10px);
+    width: max-content;
+    padding: 5px 30px;
+    background: var(--tele-icon-bg);
+    box-shadow: var(--tele-icon-box-shadow);
+    border-radius: 100px;
+    font-size: 14px;
+    opacity: 0;
+    transition: .4s;
+    transform: translateX(-30px);
+    pointer-events: none;
+}
+
+
+.bottom-call-tel.email-container {
+    z-index: 999;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: var(--main-icon-font-size);
+    color: var(--main--icon-color);
+    background: var(--email-icon-bg);
+    box-shadow: var(--call-icon-box-shadow);
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.bottom-call-tel.email-container span {
+    position: absolute;
+    left: calc(100% + 10px);
+    width: max-content;
+    padding: 5px 30px;
+    color: var(--main--icon-color);
+    background: var(--email-icon-bg);
+    border-radius: 100px;
+    font-size: 14px;
+    opacity: 0;
+    transition: .4s;
+    transform: translateX(-30px);
+    pointer-events: none;
+}
+
+.bottom-call-tel.url-container {
+    z-index: 999;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: var(--main-icon-font-size);
+    color: var(--main--icon-color);
+    background: var(--url-icon-bg);
+    box-shadow: var(--call-icon-box-shadow);
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.bottom-call-tel.url-container span {
+    position: absolute;
+    left: calc(100% + 10px);
+    width: max-content;
+    padding: 5px 30px;
+    color: var(--main--icon-color);
+    background: var(--url-icon-bg);
+    border-radius: 100px;
+    font-size: 14px;
+    opacity: 0;
+    transition: .4s;
+    transform: translateX(-30px);
+    pointer-events: none;
+}
+
+
+.bottom-call-tel.call-container:hover span,
+.bottom-call-tel.telegram-container:hover span,
+.bottom-call-tel.email-container:hover span,
+.bottom-call-tel.url-container:hover span {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.bottom-call-tel:hover::after,
+.bottom-call-tel:hover::before {
+    transform: scale(0);
+}
+
+/* bottom menu icons end */
+
+/* telegram form box start */
+#tele-chatbox-unique {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    width: 90%;
+    max-width: 400px;
+    height: max-content;
+    background-color: whitesmoke;
+    transform: translate(-150vw, 0%);
+    outline: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999999;
+    isolation: isolate;
+    border-radius: 15px;
+    box-shadow: 0 0 100vw 200vw hsla(0, 0%, 0%, 0);
+    transition: .75s;
+    overflow: hidden;
+
+}
+
+#tele-chatbox-unique * {
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+#tele-chatbox-unique.active {
+    box-shadow: 0 0 100vw 100vw hsla(0, 0%, 0%, 0.3);
+    transform: translate(-50%, 0%);
+}
+
+#tele-chatbox-unique .tele-chatbox-header {
+    width: 100%;
+    height: 80px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+}
+
+#tele-chatbox-unique .tele-chatbox-header img {
+    height: 100%;
+}
+
+#tele-chatbox-unique .tele-chatbox-header #tele-close {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(223, 42, 23);
+    font-size: 2.5rem;
+}
+
+#tele-chatbox-unique .tele-chatbox-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+#tele-chatbox-unique .tele-chatbox-body h6 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#tele-chatbox-unique .tele-chatbox-body p {
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+#tele-chatbox-unique .tele-chatbox-body textarea,
+#tele-chatbox-unique .tele-chatbox-body input {
+    box-shadow: 0 0 2px blue;
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+#tele-chatbox-unique .tele-chatbox-body .captcha-reload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tele-chatbox-unique #sendBtn {
+    background-color: blue;
+    border: none;
+    outline: none;
+    padding: 0.75rem 0.5rem;
+    color: white !important;
+    font-size: 1rem;
+    border-radius: 100vw;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+#tele-chatbox-unique #sendBtn span {
+    color: white !important;
+
+}
+
+#tele-chatbox-unique #sendBtn.active {
+    pointer-events: none;
+    background-color: hsl(20, 1%, 41%);
+}
+
+#tele-chatbox-unique #sendBtn.active span {
+    display: none;
+}
+
+#tele-chatbox-unique #sendBtn.active::after {
+    content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    background-color: white;
+    height: 100%;
+    mask-image: url(https://api.iconify.design/svg-spinners:3-dots-fade.svg);
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+
+#tele-chatbox-unique [onclick="createCaptcha()"] {
+    cursor: pointer;
+}
+
+/* telegram for box end */
+
+/* country select start */
+#country-select {
+    position: relative;
+}
+
+#country-select .val {
+    cursor: pointer;
+    width: max-content;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#country-select .val::before {
+    content: none;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 100%, 99%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0ibTEyIDEzLjRsLTIuOTE3IDIuOTI1cS0uMjc2LjI3NS0uNzA0LjI3NXQtLjcwNC0uMjc1cS0uMjc1LS4yNzUtLjI3NS0uN3QuMjc1LS43TDEwLjYgMTJMNy42NzUgOS4xMDhRNy40IDguODMyIDcuNCA4LjQwNHEwLS40MjcuMjc1LS43MDRxLjI3NS0uMjc1LjctLjI3NXQuNy4yNzVMMTIgMTAuNjI1TDE0Ljg5MiA3LjdxLjI3Ni0uMjc1LjcwNC0uMjc1cS40MjcgMCAuNzA0LjI3NXEuMy4zLjMuNzEydC0uMy42ODhMMTMuMzc1IDEybDIuOTI1IDIuOTE3cS4yNzUuMjc2LjI3NS43MDR0LS4yNzUuNzA0cS0uMy4zLS43MTIuM3QtLjY4OC0uM3oiLz48L3N2Zz4=);
+    background-size: auto 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#country-select .val.active::before {
+    content: '';
+}
+
+#country-select .val img {
+    width: 1.5rem;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+#country-select .dropdown .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#country-select .dropdown .items img {
+    width: 1.5rem;
+    object-fit: contain;
+    object-position: center;
+}
+
+#country-select .dropdown {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 1rem);
+    width: max-content;
+    max-width: 300px;
+    max-height: 300px;
+    background-color: white;
+    color: black;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 20px hsl(0, 0%, 0%, 0.5);
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3rem;
+}
+
+#country-select .dropdown.active {
+    display: grid;
+}
+
+#country-select .dropdown .items::-webkit-scrollbar {
+    width: 0px;
+    background-color: hsl(0, 0%, 80%);
+}
+
+#country-select .dropdown .items::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+#country-select .dropdown .items div.hidden {
+    display: none;
+}
+
+#country-select .dropdown .items div {
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+}
+
+#country-select .dropdown .items div:hover {
+    background-color: hsl(0, 0%, 95%);
+}
+
+.inquiry-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.inquiry-type label input {
+    width: max-content !important;
+}
+
+/* country select end */

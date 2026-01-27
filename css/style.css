@@ -1,0 +1,1183 @@
+/* =====================================================
+   1. Root Variables
+   2. Universal Styles
+   3. Colors
+   4. Glightbox
+   5. Breadcrumb
+   6. Buttons
+   7. Top Bar
+   8. Header
+   9. Banner
+   10. Info Section
+   11. Courses
+   12. Why Choose Us
+   13. Learn Section
+   14. Competition
+   15. Flags
+   16. Review
+   17. Keywords
+   18. Call to Action (CTA)
+   19. Footer
+   20. Page Style
+   21. Wave Animation
+   22. Announcement Box
+   23. Cites Footer
+   24. Responsive Media Queries
+===================================================== */
+
+
+/* 1. Root Variables */
+:root {
+    --primary-clr: #17a43b;
+    --secondary-clr: #0A0740;
+    --accent-clr: #FEE900;
+    --bg-primary: #FFEEEE;
+    --white-clr: white;
+    --black-clr: #211d1e;
+    --cites-footer-clr: #00751d;
+}
+
+/* 2. Universal Styles */
+/* universal */
+a {
+    text-decoration: none;
+    color: var(--black-clr);
+    transition: .5s;
+}
+
+a:hover {
+    color: var(--primary-clr);
+}
+
+p {
+    opacity: .8;
+}
+
+.learn-p {
+    color: var(--black-clr);
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.sub-title {
+    color: var(--secondary-clr);
+}
+
+.read-more {
+    color: var(--secondary-clr);
+    font-weight: 700;
+}
+
+.contact-box {
+    transition: .5s;
+}
+
+.contact-box>:nth-child(1) {
+    color: red;
+}
+
+.contact-box:hover {
+    background-color: var(--white-clr);
+    transform: translateY(-15px);
+}
+
+/* 3. Colors */
+/* colors */
+.bg-primary-clr {
+    background-color: #dbffd2;
+}
+
+.txt-primary-clr {
+    color: var(--primary-clr);
+}
+
+.txt-secondary-clr {
+    color: var(--secondary-clr);
+}
+
+.text-warning {
+    color: yellow !important;
+    opacity: 1 !important;
+    transition: .5s;
+}
+
+.text-warning:hover {
+    color: gold !important;
+    opacity: 1 !important;
+}
+
+/* 4. Glightbox */
+/* glight box */
+.gslide-title {
+    color: var(--primary-clr);
+    margin: 0px !important;
+}
+
+.glightbox-clean .gdesc-inner {
+    padding: 10px 20px 5px 10px;
+}
+
+/* 5. Breadcrumb */
+/* bread crumb */
+.breadcrumb-box {
+    background-color: transparent;
+    width: max-content;
+    margin: auto;
+    padding: 0px 20px;
+    border-radius: 8px;
+}
+
+.breadcrumb-item a {
+    color: var(--white-clr);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--accent-clr);
+}
+
+.breadcrumb-box>:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumb-box>:nth-child(1)>:nth-child(n) {
+    color: var(--white-clr);
+}
+
+
+/* 6. Buttons */
+/* buttons */
+
+.theme-btn {
+    --c: #fff;
+    /* text color */
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,
+        #004dff;
+    /* background color */
+    color: #0000;
+    border: none;
+    transform: perspective(500px) rotateY(calc(20deg*var(--_i, -1)));
+    text-shadow: calc(var(--_i, -1)* 0.08em) -.01em 0 var(--c),
+        calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
+    outline-offset: .1em;
+    transition: 0.3s;
+}
+
+.theme-btn:hover,
+.theme-btn:focus-visible {
+    --_p: 0%;
+    --_i: 1;
+}
+
+.theme-btn:active {
+    text-shadow: none;
+    color: var(--c);
+    box-shadow: inset 0 0 9e9q #0005;
+    transition: 0s;
+}
+
+.theme-btn {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+    cursor: pointer;
+    padding: .1em .3em;
+}
+
+/* theme-btn bg-btn */
+.theme-btn.bg-btn {
+    background-color: var(--secondary-clr);
+    color: var(--white-clr);
+}
+
+.theme-btn.bg-btn i {
+    background-color: var(--white-clr);
+    color: var(--secondary-clr);
+}
+
+.theme-btn.bg-btn:hover {
+    background-color: var(--primary-clr);
+}
+
+.theme-btn.bg-btn:hover i {
+    color: var(--primary-clr);
+}
+
+/* button 2 */
+.theme-btn-2 {
+    background-color: var(--primary-clr);
+    border: none;
+    color: var(--white-clr);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px;
+    position: relative;
+    text-transform: uppercase;
+    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),
+        background-color 100ms cubic-bezier(.694, 0, 0.335, 1),
+        color 100ms cubic-bezier(.694, 0, 0.335, 1);
+}
+
+.theme-btn-2:before {
+    background-color: var(--secondary-clr);
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+    width: 100%;
+    z-index: 0;
+}
+
+.theme-btn-2:hover:before {
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.theme-btn-2:after {
+    background-color: #FFFFFF;
+}
+
+.theme-btn-2 span {
+    position: relative;
+    z-index: 1;
+}
+
+/* button 3 */
+.theme-btn-3 {
+    color: gray;
+    transition: .5s;
+}
+
+.theme-btn-3:hover {
+    color: var(--primary-clr);
+}
+
+.theme-btn-3 i {
+    transition: .5s;
+}
+
+.theme-btn-3:hover i {
+    transform: translateX(-30%);
+}
+
+/* 7. Top Bar */
+/* top bar */
+#top-bar {
+    height: 40px;
+    background-color: var(--black-clr);
+    color: var(--white-clr);
+}
+
+.social-icon a {
+    color: var(--white-clr);
+    transform: scale(0.9);
+    transition: .5s;
+    font-size: 20px;
+    opacity: .7;
+}
+
+.social-icon a:hover {
+    color: var(--white-clr);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.contact-details a {
+    color: var(--white-clr);
+    opacity: .7;
+    transition: .5s;
+}
+
+.contact-details a:hover {
+    color: var(--accent-clr);
+    opacity: 1;
+}
+
+#top-bar .btn-check:checked+.btn,
+#top-bar .btn.active,
+#top-bar .btn.show,
+#top-bar .btn:first-child:active,
+#top-bar :not(.btn-check)+.btn:active {
+    color: var(--accent-clr) !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.dropdown {
+    outline: none !important;
+}
+
+.top-bar-drop-btn {
+    background-color: #005a2c;
+    border: none !important;
+    outline: none !important;
+    color: white;
+    width: max-content;
+    height: 100%;
+    padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+    color: var(--secondary-clr) !important;
+}
+
+.dropdown-menu li a:hover {
+    color: var(--secondary-clr) !important;
+    background-color: var(--accent-clr);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: var(--primary-clr);
+    color: var(--white-clr) !important;
+}
+
+
+.top-bar-drop-btn .dropdown-toggle {
+    color: var(--white-clr) !important;
+}
+
+#logo-box {
+    height: 80px;
+    background-color: var(--white-clr);
+}
+
+/* 8. Header */
+/* header */
+nav {
+    background-color: var(--white-clr);
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.527);
+}
+
+.nav-link {
+    padding: 0px !important;
+    transition: .5s;
+    color: var(--white-clr);
+}
+
+
+.nav-link:hover {
+    color: var(--accent-clr);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    font-weight: 500;
+    color: var(--accent-clr) !important;
+}
+
+.navbar {
+    transition: .5s;
+    background-color: var(--primary-clr);
+    width: 100%;
+
+    margin: auto;
+}
+
+
+
+.navbar.move {
+    transform: translateY(-120px);
+}
+
+.navbar.move .logo {
+    height: 130px;
+}
+
+.nav-line {
+    height: 100%;
+    background-color: var(--white-clr);
+    width: 1px;
+    opacity: .5;
+}
+
+.drop-box {
+    color: var(--white-clr);
+    padding: 0px;
+}
+
+.drop-box:hover {
+    color: var(--accent-clr);
+}
+
+.btn.show {
+    border: 0;
+    color: var(--accent-clr);
+}
+
+.dropdown-menu.show {
+    border-top: 2px solid var(--accent-clr);
+}
+
+.btn:focus-visible {
+    color: var(--white-clr) !important;
+}
+
+.btn.show,
+.btn:first-child:active {
+    color: var(--accent-clr);
+}
+
+/* 9. Banner */
+/* banner */
+.carousel-indicators {
+    bottom: 10%;
+}
+
+.carousel-indicators>:nth-child(n) {
+    aspect-ratio: 1/1;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-clr);
+}
+
+.carousel-indicators .active {
+    background-color: var(--primary-clr);
+    opacity: 1;
+}
+
+.banner-content-box {
+    text-shadow: 1px 1px 2px hsl(240, 100%, 10%), 0 0 50px hsl(240, 100%, 10%), 0 0 5px hsl(240, 100%, 10%);
+}
+
+
+/* 10. Info Section */
+/* Info Section */
+#info-new-sec {
+    transform: translateY(-50%);
+    z-index: 99;
+    position: relative;
+}
+
+#info-new-sec> :nth-child(1) {
+    background-color: var(--primary-clr);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border-radius: 10px;
+}
+
+.info-box-new {
+    gap: 1rem;
+}
+
+.info-box-icon {
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: var(--primary-clr);
+    flex-shrink: 0;
+    /* prevents shrinking */
+}
+
+.info-box-content {
+    color: #fff;
+}
+
+.info-box-content h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.info-box-content p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+/* 24. Responsive Media Queries */
+@media (max-width: 1200px) {
+    #info-new-sec {
+        transform: translateY(0);
+    }
+
+    .info-box-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        margin-block: 15px;
+    }
+
+    .info-box-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-box-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* 11. Courses */
+/* courses */
+#courses {
+    background: url(https://www.playabacusindia.com/images/banner/7.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.course-main-box {
+    border-top: 1px solid white;
+    border-right: 3px solid white;
+    position: relative;
+}
+
+.course-main-box::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 30px;
+    left: -3px;
+    top: 30px;
+    background-color: gray;
+}
+
+.course-main-box::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 30px;
+    left: -3px;
+    bottom: 30px;
+    background-color: gray;
+}
+
+.course-content-box {
+    color: var(--white-clr);
+    z-index: 1;
+    position: relative;
+}
+
+#courses .swiper {
+    width: 100%;
+    padding: 20px 5px;
+}
+
+.course-box {
+    background:
+        linear-gradient(to top, #004b10, hsl(0, 100%, 15%)),
+        var(--course-img);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--white-clr);
+}
+
+.course-box p {
+    font-size: 12px;
+}
+
+.course-main-box>:nth-child(2) {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+
+.course-icon {
+    background-color: #005a2c;
+    color: var(--white-clr);
+    transition: .5s;
+}
+
+.course-icon:hover {
+    background-color: var(--accent-clr);
+    color: var(--secondary-clr);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction .course-dot {
+    bottom: 0px;
+}
+
+.course-dot .swiper-pagination-bullet {
+    background-color: var(--primary-clr);
+    transition: .5s;
+}
+
+.course-dot .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    outline: 1px solid var(--primary-clr);
+    outline-offset: 2px;
+    scale: 1.1;
+}
+
+
+/* 12. Why Choose Us */
+/* why choose us */
+.why-box p {
+    font-size: 16px;
+}
+
+.why-box {
+    position: relative;
+    background: #fff;
+    padding: 50px 20px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+    border-radius: 12px;
+}
+
+.why-box-icon {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    color: var(--why-icon-box-clr);
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid var(--why-icon-box-clr);
+    color: var(--why-icon-box-clr);
+}
+
+.why-box::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    z-index: -1;
+    background-color: var(--why-icon-box-clr);
+    transition: .5s;
+}
+
+.why-box:hover::after {
+    width: 102%;
+    height: 103%;
+}
+
+/* Base styles for icon pseudo elements */
+.why-box-icon::after,
+.why-box-icon::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transition: .5s;
+    opacity: 0;
+}
+
+/* Left half circle */
+.why-box-icon::after {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-left: 2px solid var(--why-icon-box-clr);
+}
+
+/* Right half circle */
+.why-box-icon::before {
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
+    border-right: 2px solid var(--why-icon-box-clr);
+}
+
+/* 👇 Animation only runs on hover */
+.why-box:hover .why-box-icon::after {
+    animation: bloom-left 1s forwards;
+    opacity: 1;
+}
+
+.why-box:hover .why-box-icon::before {
+    animation: bloom-right 1s forwards;
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes bloom-left {
+    from {
+        left: 0%;
+        opacity: 0;
+    }
+
+    to {
+        left: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes bloom-right {
+    from {
+        right: 0%;
+        opacity: 0;
+    }
+
+    to {
+        right: 50%;
+        opacity: 1;
+    }
+}
+
+/* 13. Learn Section */
+/* learn */
+#learn {
+    color: var(--primary-clr);
+    background-color: #e1ffe9;
+}
+
+.learn-row {
+    background-color: var(--white-clr);
+}
+
+#learn .learn-box-content {
+    color: var(--primary-clr) !important;
+
+}
+
+#learn .learn-box-content p {
+    color: var(--black-clr) !important;
+    opacity: .7s;
+}
+
+#learn .learn-row .learn-img {
+    transition: .5s;
+    transform: translateY(-30px);
+}
+
+#learn .learn-row:hover .learn-img {
+    transform: translateY(0px);
+}
+
+#learn .theme-btn-3 {
+    color: var(--primary-clr) !important;
+    font-size: 14px;
+}
+
+#learn .theme-btn-3:hover {
+    color: var(--accent-clr) !important;
+}
+
+.learn-sub-t {
+    color: #a9b1b8;
+}
+
+.learn-t {
+    color: var(--primary-clr);
+}
+
+/* 14. Competition */
+/* competition */
+
+
+.competition-main-box {
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: .5s;
+    position: relative;
+}
+
+.competition-box>:nth-child(1) {
+    color: var(--secondary-clr);
+    font-weight: 700;
+}
+
+.competition-main-box img {
+    transition: .5s;
+    transform: translateY(0px) scale(1);
+}
+
+.competition-main-box:hover img {
+    transform: translateY(-10px) scale(1.1);
+}
+
+.competition-main-box:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.comp-year {
+    position: absolute;
+    left: 10px;
+    top: -100%;
+    height: max-content;
+    padding: 5px 20px;
+    background-color: var(--secondary-clr);
+    z-index: 1;
+    color: white;
+    transition: .5s;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.competition-main-box:hover .comp-year {
+    top: 0;
+}
+
+
+/* 15. Flags */
+/* flags */
+#flags {
+    background-color: #eaf7ff;
+}
+
+#flags .carousel-item img {
+    object-fit: contain;
+}
+
+/* 16. Review */
+/* review */
+.review-img {
+    height: 80px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid var(--primary-clr);
+}
+
+.review-box {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.review-box::after {
+    position: absolute;
+    content: "\f10e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    right: 3%;
+    top: -30%;
+    font-size: 100px;
+    color: var(--primary-clr);
+    opacity: .3;
+    transition: .5s;
+}
+
+.review-box:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.review-box:hover::after {
+    opacity: 1;
+}
+
+/* 17. Keywords */
+/* keywords */
+.keywords-box>* {
+    background-color: var(--secondary-clr);
+    color: var(--white-clr);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.keywords-box>*:hover {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+
+.see-more-btn {
+    display: none;
+}
+
+/* 18. Call to Action (CTA) */
+/* cta */
+#cta {
+    background-image: url(https://www.playabacusindia.com/images/banner/8.webp);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 70vh;
+}
+
+/* 19. Footer */
+/* footer */
+footer {
+    background-color: var(--secondary-clr);
+    overflow: hidden;
+}
+
+.footer-content-box {
+    color: var(--white-clr);
+}
+
+.footer-content-box a {
+    color: var(--white-clr);
+    transition: .5s;
+}
+
+.footer-content-box a:hover {
+    color: var(--accent-clr);
+}
+
+.fot-a i {
+    color: var(--accent-clr);
+}
+
+.imporatnt-links {
+    font-size: 12px;
+    background-color: #234a66;
+    padding: 8px 5px;
+    border-radius: 8px;
+}
+
+#state-section {
+    background-color: #234a66;
+}
+
+.state-box {
+    color: var(--white-clr);
+}
+
+.state-box span {
+    opacity: .2;
+    height: 15px;
+    width: 1px;
+    background-color: var(--white-clr);
+}
+
+.state-box a {
+    color: var(--white-clr);
+    transition: .5s;
+}
+
+.state-box a:hover {
+    color: var(--accent-clr);
+}
+
+#powerd-by {
+    color: var(--white-clr);
+    background-color: var(--primary-clr);
+}
+
+#website-list {
+    background-color: #234a66;
+    color: var(--white-clr);
+}
+
+#website-list a {
+    color: var(--white-clr);
+    transition: .5s;
+}
+
+#website-list a:hover {
+    color: var(--accent-clr);
+}
+
+/* 20. Page Style */
+/* page style */
+.course-img-box {
+    box-shadow: 0px 0px 15px var(--primary-clr);
+    border-radius: 20px;
+}
+
+.course-img-box img {
+    border-radius: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 991px) {
+    .navbar.move {
+        transform: none !important;
+    }
+}
+
+/* 21. Wave Animation */
+/* wave */
+:root {
+    --wave-color: hsl(113, 100%, 86%);
+}
+
+@keyframes wave {
+    0% {
+        mask-position: 200% center;
+    }
+
+    100% {
+        mask-position: 0% center;
+    }
+}
+
+/* 22. Announcement Box */
+.announcement-box {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #005c08;
+    /* dark background for contrast */
+}
+
+.announcement-box::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(90deg,
+            transparent 15%,
+            var(--wave-color) 45%,
+            var(--wave-color) 55%,
+            transparent 85%);
+    mask-image: linear-gradient(90deg,
+            transparent 15%,
+            black 45%,
+            black 55%,
+            transparent 85%);
+    mask-size: 200% 100%;
+    mask-position: 200% center;
+    animation: wave 3s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.announcement-box h3,
+.announcement-box a {
+    position: relative;
+    z-index: 2;
+}
+
+/* 23. Cites Footer */
+/* cites footer */
+#cites-footer-main {
+    background-color: var(--cites-footer-clr, #00751d);
+    color: var(--white-clr);
+}
+
+#cites-footer-main span {
+    opacity: .5;
+    scale: .8;
+}
+
+#cites-footer-main a {
+    color: var(--white-clr);
+}
+
+#cites-footer-main a:hover {
+    color: var(--accent-clr);
+}
+
+@media (max-width: 1200px) {
+
+    #top-bar,
+    #logo-box {
+        display: none;
+    }
+
+    #banner-slide {
+        height: 70vh;
+    }
+
+    #banner-slide .carousel-item img {
+        height: 100%;
+    }
+
+    .learn-row {
+        overflow: hidden;
+    }
+
+    .theme-btn-3 {
+        width: 80% !important;
+    }
+
+    #cta {
+        height: 90vh;
+    }
+
+    .navbar {
+        background-color: var(--white-clr);
+    }
+
+    .navbar.move {
+        transform: translateY(0px);
+    }
+
+    /* header */
+    .offcanvas {
+        background-color: rgb(0, 53, 0);
+    }
+
+    .offcanvas.offcanvas-end.show {
+        height: 100vh;
+    }
+
+    .offcanvas-header {
+        display: block;
+    }
+
+    .btn-close {
+        background-color: var(--accent-clr);
+        opacity: 1;
+    }
+
+    .navbar-toggler:focus {
+        outline: 0;
+        box-shadow: 0 0 10px var(--primary-clr);
+    }
+
+    .review-box::after {
+        right: 3%;
+        top: -3%;
+        font-size: 50px;
+    }
+
+    #bottom-operator {
+        z-index: 999 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .keywords-box-wrapper {
+        max-height: 100px;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    .keywords-box-wrapper.expanded {
+        max-height: 1000px;
+    }
+
+    .see-more-btn {
+        display: block;
+        margin: 10px auto 0;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
