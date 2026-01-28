@@ -1150,6 +1150,141 @@ nav {
     color: var(--accent-clr) !important;
 }
 
+/* About Us Section Enhancement */
+.about-video-wrapper {
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+.about-video-wrapper img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: var(--accent-gradient);
+    color: var(--secondary-clr);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(255, 183, 0, 0.4);
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.video-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: var(--primary-gradient);
+    color: var(--white-clr);
+    box-shadow: 0 0 30px rgba(46, 125, 50, 0.5);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 130px;
+    height: 130px;
+    background: var(--primary-gradient);
+    color: var(--white-clr);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.3);
+    border: 5px solid #fff;
+    z-index: 3;
+    animation: float 3s ease-in-out infinite;
+}
+
+.experience-badge .number {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.about-sub-t {
+    color: var(--primary-clr);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 50px;
+}
+
+.about-sub-t::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px;
+    background: var(--accent-clr);
+}
+
+.about-p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+    .experience-badge {
+        width: 100px;
+        height: 100px;
+        bottom: -20px;
+        right: 10px;
+    }
+
+    .experience-badge .number {
+        font-size: 24px;
+    }
+
+    .experience-badge .text {
+        font-size: 9px;
+    }
+
+    .about-video-wrapper {
+        margin-bottom: 40px;
+    }
+}
+
+
 .learn-sub-t {
     color: #a9b1b8;
 }
@@ -1167,7 +1302,30 @@ nav {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     transition: .5s;
     position: relative;
+    border-radius: 12px;
 }
+
+.competition-main-box.featured-event {
+    border: 2px solid var(--accent-clr);
+    box-shadow: 0 0 20px rgba(255, 183, 0, 0.15);
+    background: linear-gradient(180deg, #ffffff 0%, #fff9e6 100%);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--accent-gradient);
+    color: var(--secondary-clr);
+    padding: 5px 40px;
+    font-size: 12px;
+    font-weight: 800;
+    transform: rotate(45deg);
+    z-index: 2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
 
 .competition-box>:nth-child(1) {
     color: var(--secondary-clr);
@@ -1189,15 +1347,16 @@ nav {
 
 .comp-year {
     position: absolute;
-    left: 10px;
+    left: 20px;
     top: -100%;
     height: max-content;
-    padding: 5px 20px;
+    padding: 6px 15px;
     background-color: var(--secondary-clr);
     z-index: 1;
     color: white;
     transition: .5s;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 12px 12px;
+    font-weight: 700;
 }
 
 .competition-main-box:hover .comp-year {
