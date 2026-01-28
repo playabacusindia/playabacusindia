@@ -80,7 +80,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    color: var(--secondary-clr);
+    color: var(--white-clr);
     line-height: 1.15;
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -845,7 +845,7 @@ nav {
 /* 11. Courses */
 /* courses */
 #courses {
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://www.playabacusindia.com/images/banner/7.webp);
+    background: url(https://www.playabacusindia.com/images/banner/7.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -895,23 +895,51 @@ nav {
 }
 
 .course-box {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), var(--course-img);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.85)), var(--course-img);
+    background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    color: var(--white-clr);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--secondary-clr);
     height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    transition: all 0.6s ease;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    padding: 20px !important;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    overflow: hidden;
 }
 
+
+
 .course-box:hover {
-    background: linear-gradient(to bottom, rgba(16, 163, 66, 0.3), rgba(11, 15, 56, 0.9)), var(--course-img);
-    background-size: 110%;
-    background-position: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), var(--course-img);
+    border-color: var(--primary-clr);
+    box-shadow: 0 15px 45px rgba(23, 164, 59, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
 }
+
+
+.course-logo {
+    width: 140px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+.course-box:hover .course-logo {
+    transform: scale(1.15) translateY(-5px);
+}
+
+
 
 .course-box h4 {
     color: var(--accent-clr);
@@ -933,23 +961,29 @@ nav {
 }
 
 .course-icon {
-    background-color: var(--primary-clr);
-    color: var(--white-clr);
-    transition: .3s;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    background: transparent;
+    color: var(--primary-clr);
+    transition: all 0.3s ease;
+    width: auto;
+    height: auto;
+    border-radius: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 15px rgba(23, 164, 59, 0.3);
+    font-size: 32px;
+    box-shadow: none;
+    position: relative;
+    padding: 0 !important;
 }
 
 .course-icon:hover {
-    background-color: var(--secondary-clr);
-    color: var(--white-clr);
+    background: transparent;
+    color: var(--secondary-clr);
     transform: scale(1.1);
+    box-shadow: none;
+    animation: none;
 }
+
 
 .course-main-box h5 {
     color: var(--secondary-clr);
