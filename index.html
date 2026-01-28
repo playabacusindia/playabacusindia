@@ -408,6 +408,16 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#banner-slide"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#banner-slide"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
 
                 </div>
@@ -1459,6 +1469,30 @@
     <!-- custom js -->
     <script src="js/script.js"></script>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Go to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top functionality
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        };
+
+        backToTopButton.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
 </body>
 
 </html>

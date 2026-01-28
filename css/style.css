@@ -611,7 +611,8 @@ nav {
 }
 
 .carousel-indicators {
-    bottom: 40px;
+    bottom: 10px;
+    /* Moved down from 40px to avoid button overlap */
     gap: 12px;
 }
 
@@ -631,6 +632,53 @@ nav {
     transform: scale(1.4);
     box-shadow: 0 0 15px rgba(255, 183, 0, 0.6);
 }
+
+/* Custom Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    margin: 0 30px;
+}
+
+#banner-slide:hover .carousel-control-prev,
+#banner-slide:hover .carousel-control-next {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: var(--primary-clr) !important;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 991px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+        /* Hide arrows on small devices */
+    }
+
+    .carousel-indicators {
+        bottom: 5px;
+        /* Even lower on smaller screens */
+    }
+}
+
 
 .banner-content-box {
     text-align: center;
@@ -1633,5 +1681,49 @@ footer {
         padding: 8px 16px;
         border-radius: 5px;
         cursor: pointer;
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gradient);
+    color: var(--white-clr);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--accent-gradient);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 183, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 }
