@@ -1,4 +1,4 @@
-/* =====================================================
+﻿/* =====================================================
    1. Root Variables
    2. Universal Styles
    3. Colors
@@ -369,16 +369,23 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    width: 24px;
+    height: 24px;
     color: var(--white-clr);
     transition: all 0.3s ease;
     text-decoration: none;
-    font-size: 16px;
-    /* Slightly increased for better visibility of BI */
 }
+
+
+
+.social-icon a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+
+}
+
+
 
 .social-icon a i {
     display: flex;
@@ -388,13 +395,7 @@ img {
     height: 100%;
 }
 
-.social-icon a:hover {
-    background: var(--white-clr);
-    color: var(--primary-clr);
-    transform: translateY(-2px);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    opacity: 1;
-}
+
 
 .contact-details {
     display: flex;
@@ -1110,7 +1111,7 @@ nav {
     border-right: 2px solid var(--why-icon-box-clr);
 }
 
-/* 👇 Animation only runs on hover */
+/* ðŸ‘‡ Animation only runs on hover */
 .why-box:hover .why-box-icon::after {
     animation: bloom-left 1s forwards;
     opacity: 1;
@@ -1687,16 +1688,13 @@ footer {
 }
 
 .social-icon a {
-    width: 38px;
-    height: 38px;
-    background: rgba(255, 255, 255, 0.08);
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
     color: var(--white-clr) !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
     text-decoration: none;
 }
 
@@ -1704,12 +1702,19 @@ footer {
     font-size: 1.1rem;
 }
 
-.social-icon a:hover {
-    background: var(--accent-gradient);
-    color: var(--secondary-clr) !important;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px rgba(255, 183, 0, 0.3);
-    border-color: transparent;
+
+
+.social-icon a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+
+}
+
+#footer-social-section {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 
@@ -2101,4 +2106,9 @@ footer {
         height: 40px;
         font-size: 16px;
     }
+}
+
+#footer-social-section a img {
+    width: 30px !important;
+    height: 30px !important;
 }
