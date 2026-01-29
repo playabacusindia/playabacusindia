@@ -358,7 +358,8 @@ img {
 /* 7. Top Bar */
 /* top bar */
 #top-bar {
-    height: 40px;
+    height: auto;
+    padding: 8px 0;
     background-color: var(--black-clr);
     color: var(--white-clr);
 }
@@ -1941,7 +1942,7 @@ footer {
     .offcanvas .nav-link {
         color: rgba(255, 255, 255, 0.9) !important;
         font-size: 1.15rem;
-        padding: 5px 0;
+        padding: 2px 0;
         border-bottom: none;
         transition: all 0.3s ease;
         display: flex;
@@ -1960,7 +1961,7 @@ footer {
         color: var(--white-clr) !important;
         width: 100%;
         text-align: left;
-        padding: 5px 0;
+        padding: 2px 0;
         border-bottom: none;
         border-radius: 0;
         background: transparent;
@@ -2009,14 +2010,15 @@ footer {
         flex-wrap: wrap !important;
         gap: 15px !important;
         width: 100%;
-        max-width: 110px;
-        /* Forces exactly 3 icons per line */
+        max-width: 140px;
+        /* Forces exactly 3 icons per line (3*28 + 2*15 = 114px min) */
         justify-content: flex-start;
     }
 
     .offcanvas .navbar-nav {
         margin: 0 !important;
         padding: 0 !important;
+        gap: 5px !important;
     }
 
     .franchise-btn {
