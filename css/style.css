@@ -791,6 +791,157 @@ nav {
     }
 }
 
+/* Offcanvas Revamp */
+.offcanvas {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.offcanvas-header .btn-close {
+    background-color: var(--primary-light);
+    opacity: 0.1;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    padding: 1rem;
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+}
+
+.offcanvas-header .btn-close:hover {
+    opacity: 1;
+    background-color: rgba(255, 0, 0, 0.1);
+    color: red;
+    transform: rotate(90deg);
+}
+
+.offcanvas-body .nav-link {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: var(--text-clr) !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.offcanvas-body .nav-link i {
+    width: 24px;
+    text-align: center;
+    color: var(--secondary-clr);
+    transition: all 0.3s ease;
+}
+
+.offcanvas-body .nav-link:hover,
+.offcanvas-body .nav-link.active {
+    background-color: rgba(16, 185, 129, 0.08); /* Light green tint */
+    color: var(--primary-clr) !important;
+    padding-left: 25px; /* Subtle slide effect */
+}
+
+.offcanvas-body .nav-link:hover i,
+.offcanvas-body .nav-link.active i {
+    color: var(--primary-clr);
+    transform: scale(1.2);
+}
+
+/* Offcanvas Width Optimization */
+@media (max-width: 576px) {
+    .offcanvas {
+        width: 85% !important; /* Mobile */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .offcanvas {
+        width: 400px !important; /* Tablet */
+    }
+}
+
+/* Custom Scrollbar for Offcanvas */
+.offcanvas-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.offcanvas-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+/* Hero Button Enhancements */
+.hero-content .theme-btn {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+    border: 2px solid transparent;
+}
+
+.hero-content .theme-btn.bg-btn {
+    background: var(--secondary-clr);
+    color: white !important;
+}
+
+.hero-content .theme-btn.bg-btn:hover {
+    background: var(--primary-clr);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.3);
+}
+
+.hero-content .theme-btn.btn-outline-primary {
+    background: white;
+    border-color: var(--primary-clr);
+    color: var(--primary-clr) !important;
+}
+
+.hero-content .theme-btn.btn-outline-primary:hover {
+    background: var(--primary-clr);
+    color: white !important;
+    border-color: var(--primary-clr);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.2);
+}
+
+/* Ensure visibility on larger screens */
+@media (min-width: 992px) {
+    .hero-content {
+        padding-right: 2rem;
+        display: block !important; /* Force block to assist layout */
+    }
+    
+    .hero-content .d-flex {
+        display: flex !important;
+    }
+}
+
+/* Mobile adjustments for buttons */
+@media (max-width: 576px) {
+    .hero-content .d-flex {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .hero-content .theme-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
 
 /* 10. Info Section */
 /* Info Section */
