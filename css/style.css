@@ -46,6 +46,7 @@
     /* Neutrals */
     --black-clr: #1e1e1e;
     --white-clr: #ffffff;
+    --text-clr: #334155;
     --cites-footer-clr: #00751d;
 
     /* Fonts */
@@ -284,7 +285,7 @@ img {
 .theme-btn-2 {
     background: var(--accent-clr);
     border: none;
-    color: var(--secondary-clr);
+    color: var(--primary-clr);
     cursor: pointer;
     font-size: 14px;
     padding: 14px 30px;
@@ -965,7 +966,7 @@ nav {
 }
 
 .course-box {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.85)), var(--course-img);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)), var(--course-img);
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -989,7 +990,7 @@ nav {
 
 
 .course-box:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), var(--course-img);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1)), var(--course-img);
     border-color: var(--primary-clr);
     box-shadow: 0 15px 45px rgba(23, 164, 59, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.5);
     transform: translateY(-5px);
@@ -1012,14 +1013,16 @@ nav {
 
 
 .course-box h4 {
-    color: var(--accent-clr);
-    font-weight: 700;
+    color: #0F172A !important;
+    font-weight: 800;
     margin-bottom: 10px;
 }
 
 .course-box p {
     font-size: 14px;
-    opacity: 0.9;
+    color: #1e1e1e !important;
+    font-weight: 600;
+    opacity: 1;
     margin-bottom: 0;
 }
 
@@ -1465,7 +1468,7 @@ nav {
     top: 20px;
     right: -35px;
     background: var(--accent-gradient);
-    color: var(--secondary-clr);
+    color: var(--primary-clr);
     padding: 5px 40px;
     font-size: 12px;
     font-weight: 800;
@@ -1622,7 +1625,7 @@ nav {
 
 .theme-btn-cta {
     background: var(--accent-gradient);
-    color: var(--secondary-clr) !important;
+    color: var(--primary-clr) !important;
     padding: 15px 40px;
     border-radius: 50px;
     font-weight: 700;
