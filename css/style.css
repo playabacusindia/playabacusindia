@@ -65,6 +65,8 @@
 /* universal */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* Fix horizontal scroll */
 }
 
 body {
@@ -73,6 +75,8 @@ body {
     line-height: 1.8;
     background-color: var(--bg-primary);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    /* Fix horizontal scroll */
 }
 
 h1,
@@ -349,252 +353,157 @@ img {
 }
 
 /* 7. Top Bar */
-/* top bar */
 #top-bar {
-    height: auto;
-    padding: 8px 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background-color: var(--black-clr);
     color: var(--white-clr);
+    padding: 8px 0;
 }
 
-.social-icon a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
+#top-bar a:hover {
+    color: var(--accent-clr) !important;
+}
+
+#top-bar .social-icon a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 0 4px;
+    background: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    opacity: 0.8;
     color: var(--white-clr);
-    transition: all 0.3s ease;
-    text-decoration: none;
 }
 
-.social-icon a img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-
-}
-
-.social-icon a i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.contact-details {
-    display: flex;
-    align-items: center;
-}
-
-.contact-details a {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.franchise-top-btn {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 6px 16px;
-    border-radius: 20px;
-    color: var(--accent-clr) !important;
-    font-weight: 600 !important;
-    font-size: 0.85rem !important;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    display: inline-flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.franchise-top-btn:hover {
-    background: var(--accent-gradient);
-    color: var(--white-clr) !important;
-    border-color: transparent;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
-}
-
-.contact-details a:hover {
-    color: var(--accent-clr);
+#top-bar .social-icon a:hover {
+    background: transparent;
+    transform: none;
     opacity: 1;
-}
-
-#top-bar .btn-check:checked+.btn,
-#top-bar .btn.active,
-#top-bar .btn.show,
-#top-bar .btn:first-child:active,
-#top-bar :not(.btn-check)+.btn:active {
     color: var(--accent-clr) !important;
-    background-color: transparent !important;
-    border-color: transparent !important;
 }
 
-.dropdown {
-    outline: none !important;
+#top-bar .social-icon i {
+    font-size: 1rem;
 }
 
-.top-bar-drop-btn {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 4px;
-    outline: none !important;
-    color: white;
-    width: max-content;
-    height: 100%;
-    padding: 4px 12px;
-    font-size: 0.85rem;
+/* 8. Header / Navbar */
+.navbar {
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+.navbar.shadow-md {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Smoother shadow */
+    padding: 5px 0;
+    /* Shrink slightly on scroll */
+}
+
+.navbar-brand img {
     transition: all 0.3s ease;
 }
 
-.top-bar-drop-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.4) !important;
-}
-
-.dropdown-menu li a {
-    color: var(--secondary-clr) !important;
-}
-
-.dropdown-menu li a:hover {
-    color: var(--secondary-clr) !important;
-    background-color: var(--accent-clr);
-}
-
-.dropdown-item.active,
-.dropdown-item:active {
-    background-color: var(--primary-clr);
-    color: var(--white-clr) !important;
-}
-
-
-.top-bar-drop-btn .dropdown-toggle {
-    color: var(--white-clr) !important;
-}
-
-#logo-box {
-    height: 80px;
-    background-color: var(--white-clr);
-}
-
-/* 8. Header */
-/* header */
-nav {
-    background: var(--glass-bg);
-    box-shadow: var(--shadow-soft);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: var(--glass-border);
+.navbar.shadow-md .navbar-brand img {
+    height: 40px !important;
+    /* Shrink logo slightly */
 }
 
 .nav-link {
-    padding: 8px 15px !important;
-    transition: .3s;
-    color: var(--secondary-clr) !important;
-    font-weight: 500;
-    font-family: var(--font-heading);
+    color: var(--primary-light) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px !important;
     position: relative;
-    white-space: nowrap;
-    /* Prevent wrapping */
     display: flex;
     align-items: center;
 }
 
-.nav-link:hover {
-    color: var(--primary-clr) !important;
-}
-
+.nav-link:hover,
 .nav-link.active {
-    font-weight: 600;
     color: var(--primary-clr) !important;
 }
 
+/* Underline Effect */
 .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 3px;
-    bottom: 0;
+    height: 2px;
+    bottom: 5px;
     left: 50%;
-    background: var(--primary-gradient);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--accent-gradient);
+    transition: all 0.3s ease;
     transform: translateX(-50%);
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(16, 163, 66, 0.3);
 }
 
-.nav-link:hover::after {
-    width: 80%;
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 20px;
 }
 
-.navbar {
-    transition: .4s ease;
-    width: 100%;
-    margin: auto;
+/* Dropdown Animation */
+.dropdown-menu {
+    border: none;
+    margin-top: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius-md);
+    padding: 15px;
+}
+
+.animate {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+.slideIn {
+    animation-name: slideIn;
+}
+
+/* Offcanvas Mobile Tweak */
+.offcanvas-header {
+    background: #f8f9fa;
+}
+
+.offcanvas-body .nav-link {
+    font-size: 1.1rem;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 0 !important;
+}
+
+.offcanvas-body .nav-link::after {
+    display: none;
+}
+
+/* Obsolete styles cleanup */
+#logo-box {
+    display: none;
 }
 
 .navbar.move {
-    transform: translateY(-100%);
+    transform: none;
 }
 
-.nav-line {
-    height: 20px;
-    background-color: var(--black-clr);
-    width: 1px;
-    opacity: .2;
-    margin: 0 10px;
-    align-self: center;
-}
-
-.drop-box {
-    color: var(--secondary-clr);
-    padding: 8px 15px;
-    font-weight: 500;
-    font-family: var(--font-heading);
-}
-
-.drop-box:hover {
-    color: var(--primary-clr);
-}
-
-.btn.show {
-    border: 0;
-    color: var(--primary-clr);
-}
-
-.dropdown-menu {
-    border: var(--glass-border);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    box-shadow: var(--shadow-premium);
-    border-radius: var(--radius-md);
-    padding: 15px;
-    margin-top: 20px;
-}
-
-.dropdown-menu.show {
-    border-top: none;
-    display: block;
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.dropdown-item {
-    padding: 8px 15px;
-    border-radius: 6px;
-    font-size: 0.95rem;
-}
+/* Remove old hide effect */
+/* Remove old hide effect */
 
 .dropdown-item:hover {
     background-color: #f0fdf4;
@@ -2431,11 +2340,24 @@ footer {
         height: 100vh;
     }
 
+    .offcanvas {
+        transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        /* Smooth custom bezier */
+    }
+
     .offcanvas-body {
         padding: 20px 25px !important;
         display: flex;
         flex-direction: column;
         overflow-x: hidden;
+    }
+
+    /* Mobile Form Input Fix */
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+        /* Prevent iOS zoom */
     }
 
     .offcanvas .social-icon {
@@ -2581,7 +2503,11 @@ footer {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%), var(--course-img);
     background-size: cover;
     background-position: center;
-    height: 350px;
+    min-height: 350px;
+    /* Changed from fixed height to min-height */
+    height: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end !important;
     /* Move text to bottom */
     border: 1px solid rgba(0, 0, 0, 0.05);
