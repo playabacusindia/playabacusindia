@@ -112,3 +112,94 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+// ==========================================
+// Contact Form Logic (Offcanvas)
+// ==========================================
+document.addEventListener('DOMContentLoaded', function () {
+  const sendBtn = document.getElementById('sendBtn');
+
+  if (sendBtn) {
+    sendBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Get Values
+      const name = document.getElementById('tele-name').value.trim();
+      const phone = document.getElementById('tele-phone').value.trim();
+      const email = document.getElementById('tele-email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const captcha = document.getElementById('captcha').value.trim();
+      const typeInput = document.querySelector('input[name="inquiry_type"]:checked');
+      const type = typeInput ? typeInput.value : 'Inquiry';
+
+      // Basic Validation
+      if (!name || !phone || !email || !message) {
+        alert('Please fill all required fields.');
+        return;
+      }
+
+      // Static Captcha Validation (Simulated for UX)
+      // In production, sync this with a backend generator or use ReCaptcha
+      if (captcha.toUpperCase() !== 'XD5F') {
+        alert('Invalid Captcha. Please enter "XD5F".');
+        return;
+      }
+
+      sendBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+      sendBtn.disabled = true;
+
+      // Construct Message Payload for Legacy Backend
+      const fullMessage = `New Web Inquiry:\n\nType: ${type}\nName: ${name}\nPhone: +91 ${phone}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+      const payload = new URLSearchParams();
+      payload.append('message', fullMessage);
+      payload.append('photo_url', 'https://placehold.co/100x100/png'); // Legacy placeholder requirement
+
+      // Submit
+      fetch('https://www.playabacusindia.com/form/tele-abacus/tele-chatbox.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: payload
+      })
+        .then(response => {
+          if (response.ok) {
+            alert('Thank you! Your message has been sent successfully.');
+            // Reset Form
+            document.getElementById('tele-name').value = '';
+            document.getElementById('tele-phone').value = '';
+            document.getElementById('tele-email').value = '';
+            document.getElementById('message').value = '';
+            document.getElementById('captcha').value = '';
+
+            // Close Offcanvas
+            const offcanvasEl = document.getElementById('contactOffcanvas');
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+            if (offcanvas) offcanvas.hide();
+          } else {
+            throw new Error('Network response was not ok.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Something went wrong. Please try again later.');
+        })
+        .finally(() => {
+          sendBtn.innerHTML = 'Send Message';
+          sendBtn.disabled = false;
+        });
+    });
+  }
+});
+
+// Character Limiter Helper
+window.limitLetters = function (textarea, max) {
+  if (textarea.value.length > max) {
+    textarea.value = textarea.value.substring(0, max);
+  }
+  const counter = document.getElementById('wordCountMsg');
+  if (counter) {
+    counter.textContent = `${textarea.value.length} / ${max}`;
+  }
+};
