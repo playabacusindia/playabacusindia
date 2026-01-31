@@ -126,6 +126,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_header_v2.css">
 
     <!-- Meta Pixel Code -->
     <script>
@@ -157,209 +158,157 @@
 
 <body>
     <header id="header">
-        <nav class="navbar fixed-top navbar-expand-xl d-block py-0">
-            <div id="top-bar" class="container-fluid">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-12 col-lg-6 p-0">
-                            <div class="d-flex justify-content-start align-items-center w-100 h-100">
-                                <div class="d-flex justify-content-center align-items-center gap-3 ms-3 social-icon">
-                                    <a href="https://www.facebook.com/idealplayabacusindiapvtltd/" title="Facebook"><img
-                                            src="images/socialicons/facebook.svg" alt="Facebook"></a>
-                                    <a href="https://www.instagram.com/ideal_play_abacus_india/" title="Instagram"><img
-                                            src="images/socialicons/instagram.svg" alt="Instagram"></a>
-                                    <a href="https://x.com/PlayAbacus" title="X (Twitter)"><img
-                                            src="images/socialicons/x.svg" alt="X"></a>
-                                    <a href="https://wa.me/919940416989?text=Hi%20Ideal%20Play%20Abacus%2C%20I%20need%20more%20details"
-                                        title="WhatsApp"><img src="images/socialicons/whatsapp.svg" alt="WhatsApp"></a>
-                                    <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ"
-                                        title="YouTube"><img src="images/socialicons/youtube.svg" alt="YouTube"></a>
-                                    <a href="https://www.linkedin.com/company/ideal-play-abacus-india-pvt-ltd"
-                                        title="LinkedIn"><img src="images/socialicons/linkedin.svg" alt="LinkedIn"></a>
-                                </div>
-                            </div>
+        <!-- Top Bar: Slim, Dark, Info-focused -->
+        <div id="top-bar" class="py-1 bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left: Socials & Email -->
+                    <div class="col-lg-6 d-none d-lg-flex align-items-center gap-3">
+                        <div class="social-icon d-flex gap-2">
+                            <a href="https://www.facebook.com/idealplayabacusindiapvtltd/" title="Facebook"><i
+                                    class="fa-brands fa-facebook-f text-white small"></i></a>
+                            <a href="https://www.instagram.com/ideal_play_abacus_india/" title="Instagram"><i
+                                    class="fa-brands fa-instagram text-white small"></i></a>
+                            <a href="https://x.com/PlayAbacus" title="X (Twitter)"><i
+                                    class="fa-brands fa-x-twitter text-white small"></i></a>
+                            <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ" title="YouTube"><i
+                                    class="fa-brands fa-youtube text-white small"></i></a>
+                            <a href="https://www.linkedin.com/company/ideal-play-abacus-india-pvt-ltd"
+                                title="LinkedIn"><i class="fa-brands fa-linkedin-in text-white small"></i></a>
                         </div>
-                        <div class="col-12 col-md-12 col-lg-6 p-0">
-                            <div
-                                class="d-flex justify-content-end align-items-center w-100 h-100 contact-details gap-4">
-                                <a href="https://idealplayabacusindia.com/FranchiseeLogin/login.asp"
-                                    class="franchise-top-btn">Franchisee
-                                    Portal <i class="fa-solid fa-arrow-right-long ms-1"></i></a>
-                                <a href="https://www.playabacusindia.com/blog.html">Blog</a>
+                        <span class="text-white-50">|</span>
+                        <a href="mailto:contact@playabacusindia.com" class="text-white small text-decoration-none">
+                            <i class="fa-solid fa-envelope me-1"></i> contact@playabacusindia.com
+                        </a>
+                    </div>
+                    <!-- Right: Franchise, Phone, Language -->
+                    <div
+                        class="col-lg-6 col-12 d-flex justify-content-lg-end justify-content-between align-items-center gap-3">
+                        <div class="d-lg-none d-flex align-items-center gap-2">
+                            <a href="tel:919940416989" class="text-white small fw-bold text-decoration-none">
+                                <i class="fa-solid fa-phone me-1"></i> +91 99404 16989
+                            </a>
+                        </div>
 
-                                <div class="dropdown ">
-                                    <button class="dropdown-toggle top-bar-drop-btn" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Language
-                                    </button>
-                                    <ul class="dropdown-menu p-0">
-                                        <li><a class="dropdown-item active" href="index.html">English</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="tel:919940416989"
+                                class="d-none d-lg-inline-block text-white small fw-bold text-decoration-none">
+                                <i class="fa-solid fa-phone me-1"></i> +91 99404 16989
+                            </a>
+                            <a href="https://idealplayabacusindia.com/FranchiseeLogin/login.asp"
+                                class="badge rounded-pill bg-primary text-white text-decoration-none px-3 py-2">
+                                <i class="fa-solid fa-user-lock me-1"></i> Franchise Login
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="logo-box" class="container-fluid py-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 p-0">
-                            <div class="d-flex justify-content-between align-items-center w-100">
-                                <div
-                                    class="d-flex justify-content-center justify-content-md-start justify-content-lg-start align-items-center w-100">
-                                    <img class="w-50" src="https://www.playabacusindia.com/images/logo.jpg"
-                                        alt="Abacus class and Franchises">
-                                </div>
-                                <div class="d-flex justify-content-end align-items-center w-100 gap-4">
-                                    <div class="d-flex justify-content-center align-items-start flex-column">
-                                        <p class="m-0 text-secondary fw-bold" style="font-size: 0.8rem;"><i
-                                                class="fa-solid fa-envelope me-2 text-gradient"></i>Mail Us</p>
-                                        <a href="mailto:contact@playabacusindia.com"
-                                            class="fw-bold text-dark">contact@playabacusindia.com</a>
-                                    </div>
-                                    <div class="vr mx-2"></div>
-                                    <div class="d-flex justify-content-center align-items-start flex-column">
-                                        <p class="m-0 text-secondary fw-bold" style="font-size: 0.8rem;"><i
-                                                class="fa-solid fa-phone-volume me-2 text-gradient"></i>Call Us</p>
-                                        <a href="tel:919940416989" class="fw-bold text-dark">+91 99404 16989</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-2">
-                <div class="d-flex d-md-flex d-xl-none justify-content-between align-items-center w-100 p-3">
-                    <img class="w-75" src="https://www.playabacusindia.com/images/logo.jpg"
-                        alt="Abacus class and Franchises">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+        </div>
+
+        <!-- Main Navbar: Logo + Links -->
+        <nav class="navbar navbar-expand-xl navbar-light bg-white sticky-top shadow-sm py-2">
+            <div class="container">
+                <!-- Brand Logo -->
+                <a class="navbar-brand me-4" href="index.html">
+                    <img src="https://www.playabacusindia.com/images/logo.jpg" alt="Ideal Play Abacus"
+                        style="height: 50px; width: auto;">
+                </a>
+
+                <!-- Mobile Toggler -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Offcanvas Menu -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel" data-bs-scroll="false">
-                    <div class="offcanvas-header d-flex justify-content-between align-items-center border-bottom pb-3">
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header border-bottom">
                         <img src="images/brandslogo/1.png" alt="Ideal Play Abacus" style="height: 40px; width: auto;">
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-start flex-grow-1 gap-2 gap-lg-4">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 gap-1 gap-xl-3 fw-semibold">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">
-                                    <i class="fa-solid fa-house me-2"></i> Home
-                                </a>
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about-us.html">
-                                    <i class="fa-solid fa-user-group me-2"></i> About Us
-                                </a>
+                                <a class="nav-link" href="about-us.html">About Us</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
-                                    <i class="fa-solid fa-book-open me-2"></i> Our Courses
+                                    Courses
                                 </a>
-                                <ul class="dropdown-menu border-0 shadow-sm mt-0">
-                                    <li><a class="dropdown-item" href="our-courses/abacus.html">Abacus</a></li>
-                                    <li><a class="dropdown-item" href="our-courses/speed-arithmetic.html">Vedic
-                                            Mathematics</a></li>
-                                    <li><a class="dropdown-item" href="our-courses/arka-kids.html">Arka Kids</a></li>
-                                    <li><a class="dropdown-item" href="our-courses/creative-arts-india.html">Creative
-                                            Art India</a></li>
-                                    <li><a class="dropdown-item" href="our-courses/phonics-star.html">Phonics Star</a>
+                                <ul class="dropdown-menu border-0 shadow-lg animate slideIn rounded-3 mt-2">
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/abacus.html">Abacus</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="our-courses/handwriting.html">Handwriting</a>
+                                    <li><a class="dropdown-item px-3 py-2"
+                                            href="our-courses/speed-arithmetic.html">Vedic Mathematics</a></li>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/arka-kids.html">Arka
+                                            Kids</a></li>
+                                    <li><a class="dropdown-item px-3 py-2"
+                                            href="our-courses/creative-arts-india.html">Creative Art India</a></li>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/phonics-star.html">Phonics
+                                            Star</a></li>
+                                    <li><a class="dropdown-item px-3 py-2"
+                                            href="our-courses/handwriting.html">Handwriting</a></li>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/brite-english.html">Brite
+                                            English</a></li>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/brain-tree.html">Brain
+                                            Tree</a></li>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/my-math.html">My Math</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="our-courses/brite-english.html">Brite English</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="our-courses/brain-tree.html">Brain Tree</a></li>
-                                    <li><a class="dropdown-item" href="our-courses/my-math.html">My Math</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">
-                                    <i class="fa-solid fa-images me-2"></i> Gallery
-                                </a>
+                                <a class="nav-link" href="gallery.html">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact-us.html">
-                                    <i class="fa-solid fa-phone me-2"></i> Contact Us
-                                </a>
+                                <a class="nav-link" href="https://www.playabacusindia.com/blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact Us</a>
                             </li>
                         </ul>
 
-                        <!-- Mobile Sidebar Footer Actions -->
-                        <div class="d-lg-none mt-4 pt-4 border-top">
-                            <a href="https://idealplayabacusindia.com/FranchiseeLogin/login.asp"
-                                class="btn btn-outline-primary w-100 mb-3 rounded-pill fw-bold d-flex justify-content-between align-items-center px-4">
-                                Franchisee Portal <i class="fa-solid fa-arrow-right"></i>
+                        <!-- Desktop CTA -->
+                        <div class="d-none d-xl-flex align-items-center">
+                            <a href="contact-us.html"
+                                class="btn btn-warning text-dark fw-bold rounded-pill px-4 shadow-sm">
+                                Enquire Now
                             </a>
+                        </div>
 
-                            <div class="d-flex flex-column gap-3 mb-4">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="icon-circle bg-light text-primary rounded-circle p-2">
-                                        <i class="fa-solid fa-envelope"></i>
-                                    </div>
-                                    <div>
-                                        <small class="text-secondary d-block fw-semibold">MAIL US</small>
-                                        <a href="mailto:contact@playabacusindia.com"
-                                            class="text-dark fw-bold text-decoration-none small">contact@playabacusindia.com</a>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="icon-circle bg-light text-primary rounded-circle p-2">
-                                        <i class="fa-solid fa-phone"></i>
-                                    </div>
-                                    <div>
-                                        <small class="text-secondary d-block fw-semibold">CALL US</small>
-                                        <a href="tel:919940416989"
-                                            class="text-dark fw-bold text-decoration-none small">+91 99404 16989</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="social-links-sidebar">
-                                <h6 class="text-secondary mb-3 small fw-bold">FOLLOW US</h6>
-                                <div class="d-flex gap-3">
-                                    <a href="https://www.facebook.com/idealplayabacusindiapvtltd/"
-                                        class="text-muted fs-5 hover-lift"><i class="fa-brands fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/ideal_play_abacus_india/"
-                                        class="text-muted fs-5 hover-lift"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://x.com/PlayAbacus" class="text-muted fs-5 hover-lift"><i
-                                            class="fa-brands fa-x-twitter"></i></a>
-                                    <a href="https://wa.me/919940416989" class="text-muted fs-5 hover-lift"><i
-                                            class="fa-brands fa-whatsapp"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ"
-                                        class="text-muted fs-5 hover-lift"><i class="fa-brands fa-youtube"></i></a>
-                                </div>
+                        <!-- Mobile Only Footer in Menu -->
+                        <div class="d-xl-none mt-4">
+                            <a href="contact-us.html" class="btn btn-primary w-100 rounded-pill mb-3">Enquire Now</a>
+                            <div class="d-flex justify-content-center gap-3 fs-4 mt-3 flex-wrap">
+                                <a href="https://www.facebook.com/idealplayabacusindiapvtltd/" class="text-secondary"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/ideal_play_abacus_india/" class="text-secondary"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://x.com/PlayAbacus" class="text-secondary"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://wa.me/919940416989" class="text-secondary"><i
+                                        class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ"
+                                    class="text-secondary"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.linkedin.com/company/ideal-play-abacus-india-pvt-ltd"
+                                    class="text-secondary"><i class="fa-brands fa-linkedin-in"></i></a>
                             </div>
                         </div>
+
                     </div>
                 </div>
-
-                <!-- Auto-close Offcanvas Script -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        var offcanvasElement = document.getElementById('offcanvasNavbar');
-                        var offcanvas = new bootstrap.Offcanvas(offcanvasElement);
-                        var navLinks = offcanvasElement.querySelectorAll('.nav-link:not(.dropdown-toggle)');
-
-                        navLinks.forEach(function (link) {
-                            link.addEventListener('click', function () {
-                                offcanvas.hide();
-                            });
-                        });
-                    });
-                </script>
+            </div>
         </nav>
+
+
     </header>
     <main style="overflow:hidden" class="w-100">
         <!-- banner -->
-        <section id="banner" class="container-fluid mt-5 pt-3 pt-md-0 pt-lg-5">
+        <section id="banner" class="container-fluid pt-0 pt-md-0">
             <div class="row">
                 <div class="col-12 p-0">
                     <!-- Modern Hero Section -->
@@ -389,8 +338,8 @@
                                         </p>
                                         <div class="d-flex justify-content-center justify-content-lg-start gap-3 fade-in-up"
                                             style="animation-delay: 0.4s;">
-                                            <a href="contact-us.html" class="theme-btn bg-btn hover-lift">
-                                                Enquire Now <i class="fa-solid fa-arrow-right ms-2"></i>
+                                            <a href="contact-us.html" class="theme-btn-2 text-decoration-none">
+                                                <span>Enquire Now <i class="fa-solid fa-arrow-right ms-2"></i></span>
                                             </a>
                                             <a href="#about-us" class="theme-btn btn-outline-primary hover-lift">
                                                 <i class="fa-solid fa-play me-2"></i> Watch Video

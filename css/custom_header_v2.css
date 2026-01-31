@@ -1,0 +1,141 @@
+/* =====================================================
+   Updated Header Styles - Compact Double Header
+===================================================== */
+
+/* 7. Top Bar */
+#top-bar {
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#top-bar a:hover {
+    color: var(--accent-clr) !important;
+}
+
+#top-bar .social-icon a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 0 4px;
+    background: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+#top-bar .social-icon a:hover {
+    background: transparent;
+    transform: none;
+    opacity: 1;
+    color: var(--accent-clr) !important;
+}
+
+#top-bar .social-icon i {
+    font-size: 1rem;
+}
+
+/* 8. Header / Navbar */
+.navbar {
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar.shadow-md {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Smoother shadow */
+    padding: 5px 0;
+    /* Shrink slightly on scroll */
+}
+
+.navbar-brand img {
+    transition: all 0.3s ease;
+}
+
+.navbar.shadow-md .navbar-brand img {
+    height: 40px !important;
+    /* Shrink logo slightly */
+}
+
+.nav-link {
+    color: var(--primary-light) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px !important;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-clr) !important;
+}
+
+/* Underline Effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 50%;
+    background: var(--accent-gradient);
+    /* Use accent for pop */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 20px;
+    /* Subtle underline */
+}
+
+/* Dropdown Animation */
+.dropdown-menu {
+    border: none;
+    margin-top: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.animate {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+.slideIn {
+    animation-name: slideIn;
+}
+
+/* Offcanvas Mobile Tweak */
+.offcanvas-header {
+    background: #f8f9fa;
+}
+
+.offcanvas-body .nav-link {
+    font-size: 1.1rem;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 0 !important;
+}
+
+.offcanvas-body .nav-link::after {
+    display: none;
+    /* No underline on mobile */
+}
+
+/* Obsolete styles can be removed or overridden above */
+#logo-box {
+    display: none;
+}

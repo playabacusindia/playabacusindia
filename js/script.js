@@ -1,14 +1,26 @@
 
+// Sticky Navbar Shadow Effect
 const navBar = document.querySelector(".navbar");
-const offcanvas = document.querySelector("#offcanvasNavbar");
-
 window.addEventListener("scroll", () => {
-  const isOffcanvasOpen = offcanvas.classList.contains("show");
+  if (window.scrollY > 50) {
+    navBar.classList.add("shadow-md");
+  } else {
+    navBar.classList.remove("shadow-md");
+  }
+});
 
-  if (!isOffcanvasOpen && window.scrollY > 60) {
-    navBar.classList.add("move");
-  } else if (!isOffcanvasOpen) {
-    navBar.classList.remove("move");
+// Close offcanvas on link click (Mobile UX)
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
+  const offcanvas = document.getElementById('offcanvasNavbar');
+  if (offcanvas) {
+    const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
+    navLinks.forEach(function (l) {
+      l.addEventListener('click', function () {
+        const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
+        if (offcanvasInstance) offcanvasInstance.hide();
+      });
+    });
   }
 });
 
@@ -91,7 +103,7 @@ function toggleKeywords() {
 
 
 
-// Attach event listener to the Send button document.getElementById("sendBtn").addEventListener("click", function () { setTimeout(function () { gtag('event', 'conversion', { 'send_to': 'AW-16751882003/E23UCJ2P8_EaEJPe9bM-', 'value': 1.0, 'currency': 'INR' }); }, 500); });
+
 
 // copy right years
 document.addEventListener('DOMContentLoaded', () => {
