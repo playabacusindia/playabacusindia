@@ -1744,6 +1744,8 @@ footer {
 
 .footer-content-box {
     color: rgba(255, 255, 255, 0.8);
+    padding-left: 20px;
+    /* Slightly moved right for better alignment */
 }
 
 .footer-content-box h4 {
@@ -1751,7 +1753,7 @@ footer {
     font-weight: 700;
     font-size: 1.15rem;
     /* Slightly smaller for elegance */
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     position: relative;
     display: inline-block;
 }
