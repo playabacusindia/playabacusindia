@@ -416,26 +416,32 @@ img {
 .nav-link {
     color: var(--primary-light) !important;
     font-weight: 600;
-    /* Matching Enquire button weight */
-    font-size: 0.95rem;
-    padding: 10px 24px !important;
+    font-size: 0.9rem;
+    /* Reduced from 0.95rem */
+    padding: 8px 18px !important;
+    /* Reduced from 10px 24px */
     /* Increased padding to match Enquire button (px-4) */
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* Center text within pill */
+    white-space: nowrap;
+    /* Prevent "About Us" from breaking into two lines */
     --bs-border-radius-pill: 50rem;
     border-radius: var(--bs-border-radius-pill) !important;
-    letter-spacing: 1px;
-    /* Increased letter spacing for better premium feel */
+    letter-spacing: 0.5px;
+    /* Reduced from 1px to make it less ëwideí */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
 .nav-link.active,
 .dropdown.show>.nav-link {
-    color: var(--secondary-clr) !important;
+    color: var(--primary-clr) !important;
+    /* Unified with dropdown-item hover */
     background-color: #f0fdf4;
-    /* Matches dropdown item hover */
+    /* Soft green pill */
     border-radius: var(--bs-border-radius-pill) !important;
 }
 
@@ -485,21 +491,6 @@ img {
 
 .slideIn {
     animation-name: slideIn;
-}
-
-/* Offcanvas Mobile Tweak */
-.offcanvas-header {
-    background: #f8f9fa;
-}
-
-.offcanvas-body .nav-link {
-    font-size: 1.1rem;
-    border-bottom: 1px solid #f0f0f0;
-    padding: 12px 0 !important;
-}
-
-.offcanvas-body .nav-link::after {
-    display: none;
 }
 
 /* Obsolete styles cleanup */
@@ -709,43 +700,44 @@ img {
     }
 }
 
-/* Offcanvas Revamp - Native Bootstrap 5 Style */
-.offcanvas {
-    /* Keeping it clean for native smoothness */
-    background-color: #fff;
-}
 
-.offcanvas-header .btn-close {
-    opacity: 0.8;
-}
-
-.offcanvas-header .btn-close:hover {
-    opacity: 1;
+/* Offcanvas Mobile Tweak */
+.offcanvas-header {
+    background: #f8f9fa;
 }
 
 .offcanvas-body .nav-link {
-    font-size: 1.1rem;
-    padding: 6px 15px;
+    font-size: 1rem;
+    /* Slightly smaller for mobile context */
+    border-bottom: 1px solid #f0f0f0;
+    padding: 8px 18px !important;
+    /* Standardized with main navbar */
     color: var(--text-clr) !important;
     font-weight: 600;
-    transition: color 0.2s ease-in-out;
+    --bs-border-radius-pill: 50rem;
+    border-radius: var(--bs-border-radius-pill) !important;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
+    white-space: nowrap;
+    /* Consistency across mobile and desktop */
 }
 
 .offcanvas-body .nav-link i {
-    width: 24px;
+    width: 32px;
+    /* Increased gap */
     text-align: center;
     color: var(--secondary-clr);
-    transition: color 0.2s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .offcanvas-body .nav-link:hover,
 .offcanvas-body .nav-link.active {
     color: var(--primary-clr) !important;
-    background-color: rgba(0, 0, 0, 0.03);
-    /* Very subtle hover bg */
-    border-radius: 8px;
+    background-color: #f0fdf4;
+    /* Unified with main navbar */
+    border-radius: var(--bs-border-radius-pill) !important;
 }
 
 .offcanvas-body .nav-link:hover i,
