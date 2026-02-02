@@ -104,7 +104,7 @@ a:hover {
 
 p {
     opacity: 1;
-    color: var(--text-clr);
+    color: var(--black-clr);
     margin-bottom: 1.5rem;
 }
 
@@ -416,34 +416,43 @@ img {
 .nav-link {
     color: var(--primary-light) !important;
     font-weight: 600;
+    /* Matching Enquire button weight */
     font-size: 0.95rem;
-    padding: 8px 16px !important;
+    padding: 10px 24px !important;
+    /* Increased padding to match Enquire button (px-4) */
     position: relative;
     display: flex;
     align-items: center;
+    --bs-border-radius-pill: 50rem;
+    border-radius: var(--bs-border-radius-pill) !important;
+    letter-spacing: 1px;
+    /* Increased letter spacing for better premium feel */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
-.nav-link.active {
-    color: var(--primary-clr) !important;
+.nav-link.active,
+.dropdown.show>.nav-link {
+    color: var(--secondary-clr) !important;
+    background-color: #f0fdf4;
+    /* Matches dropdown item hover */
+    border-radius: var(--bs-border-radius-pill) !important;
 }
 
-/* Underline Effect */
+/* Modern Chevron Animation */
+.nav-link i {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover i,
+.dropdown.show>.nav-link i {
+    transform: translateY(2px);
+}
+
+/* Remove Underline Effect (Old Style) */
 .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 5px;
-    left: 50%;
-    background: var(--accent-gradient);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 20px;
+    display: none;
 }
 
 /* Dropdown Animation */
@@ -716,7 +725,7 @@ img {
 
 .offcanvas-body .nav-link {
     font-size: 1.1rem;
-    padding: 10px 15px;
+    padding: 6px 15px;
     color: var(--text-clr) !important;
     font-weight: 600;
     transition: color 0.2s ease-in-out;
@@ -1032,16 +1041,23 @@ img {
 .course-box:hover {
     background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1)), var(--course-img);
     border-color: var(--primary-clr);
-    box-shadow: 0 15px 45px rgba(23, 164, 59, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 45px rgba(23, 164, 59, 0.1);
     transform: translateY(-5px);
 }
 
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 36px !important;
+        width: auto;
+    }
+}
 
 .course-logo {
     width: 140px;
     height: 90px;
     object-fit: contain;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
 }
