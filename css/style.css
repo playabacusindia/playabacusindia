@@ -597,12 +597,12 @@ img {
     width: 100%;
     height: auto;
     border-radius: 20px;
-    transform: rotate(2deg);
+    transform: rotate(0deg);
     transition: all 0.5s ease;
 }
 
 .hero-image-wrapper:hover .hero-main-img {
-    transform: rotate(0deg) scale(1.02);
+    transform: rotate(2deg) scale(1.02);
 }
 
 .floating-badge {
@@ -617,13 +617,15 @@ img {
 }
 
 .badge-1 {
-    top: 10%;
+    top: 15%;
+    /* Moved down slightly from 10% */
     left: -20px;
     animation-delay: 0s;
 }
 
 .badge-2 {
-    bottom: 10%;
+    bottom: 25%;
+    /* Moved up from 10% to be more visible */
     right: -20px;
     animation-delay: 1.5s;
 }
