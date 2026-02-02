@@ -1013,6 +1013,13 @@ img {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
+    color: var(--primary-clr);
+    /* Ensure dark color on light bg */
+}
+
+.course-box h4,
+.course-main-box h5 {
+    color: var(--primary-clr) !important;
 }
 
 #courses .swiper {
