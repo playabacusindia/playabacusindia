@@ -612,8 +612,11 @@ img {
     align-items: center;
     box-shadow: var(--shadow-premium);
     z-index: 2;
-    background: rgba(255, 255, 255, 0.95);
-    animation: float 3s ease-in-out infinite;
+    background: rgba(255, 255, 255, 0.8);
+    /* Reduced opacity */
+    backdrop-filter: blur(8px);
+    /* Premium glassmorphism effect */
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .badge-1 {
@@ -706,13 +709,22 @@ img {
 /* Offcanvas Mobile Tweak */
 .offcanvas-header {
     background: #f8f9fa;
+    padding: 15px 20px;
+    /* More compact header */
+}
+
+.offcanvas-body {
+    padding: 20px !important;
+    /* Tighten overall body padding */
 }
 
 .offcanvas-body .nav-link {
-    font-size: 1rem;
-    /* Slightly smaller for mobile context */
-    border-bottom: 1px solid #f0f0f0;
-    padding: 8px 18px !important;
+    font-size: 1.1rem;
+    /* Slightly larger for mobile readability */
+    border-bottom: none;
+    /* Removed border for a cleaner, gap-free look */
+    padding: 6px 18px !important;
+    /* Reduced vertical padding */
     /* Standardized with main navbar */
     color: var(--text-clr) !important;
     font-weight: 600;
