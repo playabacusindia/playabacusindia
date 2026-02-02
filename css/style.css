@@ -1358,7 +1358,7 @@ img {
 
 #learn .theme-btn-3:hover {
     background: var(--accent-gradient);
-    color: var(--secondary-clr) !important;
+    color: var(--primary-clr) !important;
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(255, 183, 0, 0.3);
 }
