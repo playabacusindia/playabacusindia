@@ -971,7 +971,7 @@ img {
 /* 11. Courses */
 /* courses */
 #courses {
-    background: url(https://www.playabacusindia.com/images/banner/7.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/home/Skill-based-learn.JPG);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1651,7 +1651,7 @@ img {
 /* 18. Call to Action (CTA) */
 /* cta */
 #cta {
-    background-image: linear-gradient(rgba(0, 71, 11, 0.6), rgba(0, 31, 5, 0.7)), url(https://www.playabacusindia.com/images/banner/8.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/home/APR62776.JPG);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -1732,9 +1732,12 @@ footer {
     background-color: var(--primary-clr);
     background: linear-gradient(180deg, var(--primary-clr) 0%, #020617 100%);
     overflow: hidden;
-    padding-top: 60px;
+    padding-top: 80px;
+    /* Increased top padding for better breathing room */
+    padding-bottom: 0;
     position: relative;
-    border-top: 5px solid var(--accent-clr);
+    border-top: 4px solid var(--accent-clr);
+    /* Slightly thinner, more refined border */
 }
 
 
@@ -1746,8 +1749,9 @@ footer {
 .footer-content-box h4 {
     color: var(--white-clr);
     font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: 30px;
+    font-size: 1.15rem;
+    /* Slightly smaller for elegance */
+    margin-bottom: 25px;
     position: relative;
     display: inline-block;
 }
@@ -1765,42 +1769,47 @@ footer {
 
 
 .footer-content-box a.fot-a {
-    color: rgba(255, 255, 255, 0.7);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: rgba(255, 255, 255, 0.6);
+    /* Softer default color */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     text-decoration: none;
+    font-size: 0.95rem;
 }
 
 .footer-content-box a.fot-a:hover {
     color: var(--accent-clr);
-    transform: translateX(8px);
+    transform: translateX(5px);
+    /* Subtler translate */
 }
 
 .footer-content-box a.fot-a i {
     color: var(--accent-clr);
-    font-size: 1rem;
+    font-size: 0.85rem;
+    /* Consistently sized icons */
 }
 
 
 .state-box a {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8) !important;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7) !important;
+    padding: 5px 12px;
+    border-radius: 6px;
+    /* Matching brand card radius (more square-ish) */
+    font-size: 0.8rem;
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .state-box a:hover {
-    background: var(--accent-clr);
-    color: var(--secondary-clr) !important;
-    border-color: var(--accent-clr);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 183, 0, 0.3);
+    background: rgba(16, 185, 129, 0.15);
+    /* Soft primary tint */
+    color: var(--white-clr) !important;
+    border-color: rgba(16, 185, 129, 0.5);
+    transform: translateY(-2px);
 }
 
 .state-box span {
@@ -1822,27 +1831,36 @@ footer {
 }
 
 .social-icon a {
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--white-clr) !important;
-    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    /* Standard rounded icon boxes */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
 }
 
-.social-icon a i {
-    font-size: 1.1rem;
+.social-icon a:hover {
+    background: var(--accent-clr);
+    transform: translateY(-3px);
+    border-color: var(--accent-clr);
 }
 
-
-
 .social-icon a img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
+    filter: brightness(0) invert(1);
+    /* Ensure icons are white */
+}
 
+.social-icon a:hover img {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(26%) saturate(6011%) hue-rotate(189deg) brightness(91%) contrast(100%);
+    /* Primary color for hover contrast */
 }
 
 #footer-social-section {
