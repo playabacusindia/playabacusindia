@@ -2500,7 +2500,7 @@ footer {
     overflow: hidden;
     position: relative;
     /* Maintain background image logic but enhance it */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%), var(--course-img);
+    /*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%), var(--course-img);/*/
     background-size: cover;
     background-position: center;
     min-height: 350px;
