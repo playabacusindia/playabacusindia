@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -94,13 +94,21 @@
 }
 </script>
 
-    <!-- boostrap -->
+    <!-- Bootstrap -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
     </noscript>
-    <!-- font awesome -->
+
+    <!-- Swiper -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </noscript>
+
+    <!-- Font Awesome -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -109,10 +117,16 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- form -->
-    <link rel="stylesheet" href="form/biz-msg-box/style.css">
-    <!-- custom css -->
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -146,186 +160,162 @@
 
 <body>
     <header id="header">
-        <nav class="navbar fixed-top navbar-expand-xl d-block py-0">
-            <div id="top-bar" class="container-fluid">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-12 col-lg-6 p-0">
-                            <div class="d-flex justify-content-start align-items-center w-100 h-100">
-                                <div class="d-flex justify-content-center align-items-center gap-4 ms-3 social-icon">
-                                    <a href="https://www.facebook.com/idealplayabacusindiapvtltd/"><i
-                                            class="bi bi-facebook"></i></a>
-                                    <a href="https://www.instagram.com/ideal_play_abacus_india/"><i
-                                            class="bi bi-instagram"></i></a>
-                                    <a href="https://x.com/PlayAbacus"><i class="bi bi-twitter-x"></i></a>
-                                    <a
-                                        href="https://wa.me/919940416989?text=Hi%20Ideal%20Play%20Abacus%2C%20I%20need%20more%20details"><i
-                                            class="bi bi-whatsapp"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ"><i
-                                            class="bi bi-youtube"></i></a>
-                                    <a href="https://www.linkedin.com/company/ideal-play-abacus-india-pvt-ltd"><i
-                                            class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
+        <!-- Top Bar: Slim, Dark, Info-focused -->
+        <div id="top-bar" class="py-1 bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left: Socials & Email -->
+                    <div class="col-lg-6 d-none d-lg-flex align-items-center gap-3">
+                        <div class="social-icon d-flex gap-2">
+                            <a href="https://www.facebook.com/idealplayabacusindiapvtltd/" title="Facebook"><i
+                                    class="fa-brands fa-facebook-f text-white small"></i></a>
+                            <a href="https://www.instagram.com/ideal_play_abacus_india/" title="Instagram"><i
+                                    class="fa-brands fa-instagram text-white small"></i></a>
+                            <a href="https://x.com/PlayAbacus" title="X (Twitter)"><i
+                                    class="fa-brands fa-x-twitter text-white small"></i></a>
+                            <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ" title="YouTube"><i
+                                    class="fa-brands fa-youtube text-white small"></i></a>
+                            <a href="https://www.linkedin.com/company/ideal-play-abacus-india-pvt-ltd"
+                                title="LinkedIn"><i class="fa-brands fa-linkedin-in text-white small"></i></a>
                         </div>
-                        <div class="col-12 col-md-12 col-lg-6 p-0">
-                            <div
-                                class="d-flex justify-content-end align-items-center w-100 h-100 contact-details gap-4">
-                                <a href="https://idealplayabacusindia.com/FranchiseeLogin/login.asp"
-                                    class="text-warning">Franchisee
-                                    Portal <i class="fa-solid fa-exclamation fa-bounce text-warning"></i></a>
-                                <a href="https://www.playabacusindia.com/blog.html">Blog</a>
+                        <span class="text-white-50">|</span>
+                        <a href="mailto:contact@playabacusindia.com" class="text-white small text-decoration-none">
+                            <i class="fa-solid fa-envelope me-1"></i> contact@playabacusindia.com
+                        </a>
+                    </div>
+                    <!-- Right: Franchise, Phone, Language -->
+                    <div
+                        class="col-lg-6 col-12 d-flex justify-content-lg-end justify-content-between align-items-center gap-3">
+                        <div class="d-lg-none d-flex align-items-center gap-2">
+                            <a href="tel:919940416989" class="text-white small fw-bold text-decoration-none">
+                                <i class="fa-solid fa-phone me-1"></i> +91 99404 16989
+                            </a>
+                        </div>
 
-                                <div class="dropdown ">
-                                    <button class="dropdown-toggle top-bar-drop-btn" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Language
-                                    </button>
-                                    <ul class="dropdown-menu p-0">
-                                        <li><a class="dropdown-item active" href="index.html">English</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="tel:919940416989"
+                                class="d-none d-lg-inline-block text-white small fw-bold text-decoration-none">
+                                <i class="fa-solid fa-phone me-1"></i> +91 99404 16989
+                            </a>
+                            <a href="https://idealplayabacusindia.com/FranchiseeLogin/login.asp"
+                                class="badge rounded-pill bg-primary text-white text-decoration-none px-3 py-2">
+                                <i class="fa-solid fa-user-lock me-1"></i> Franchise Login
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="logo-box" class="container-fluid py-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 p-0">
-                            <div class="d-flex justify-content-between align-items-center w-100">
-                                <div
-                                    class="d-flex justify-content-center justify-content-md-start justify-content-lg-start align-items-center w-100">
-                                    <img class="w-50" src="https://www.playabacusindia.com/images/logo.jpg"
-                                        alt="Abacus class and Franchises">
-                                </div>
-                                <div class="d-flex justify-content-end align-items-center w-100 gap-4">
-                                    <div class="d-flex justify-content-center align-items-start flex-column">
-                                        <p class="m-0">MAIL</p>
-                                        <a href="mailto:contact@playabacusindia.com">contact@playabacusindia.com</a>
-                                    </div>|
-                                    <div class="d-flex justify-content-center align-items-start flex-column">
-                                        <p class="m-0">CAll</p>
-                                        <a href="tel:919940416989">+91 99404 16989</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-2">
-                <div class="d-flex d-md-flex d-xl-none justify-content-between align-items-center w-100 p-3">
-                    <img class="w-75" src="https://www.playabacusindia.com/images/logo.jpg"
-                        alt="Abacus class and Franchises">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+        </div>
+
+        <!-- Main Navbar: Logo + Links -->
+        <nav class="navbar navbar-expand-xl navbar-light bg-white sticky-top shadow-sm py-2">
+            <div class="container">
+                <!-- Brand Logo -->
+                <a class="navbar-brand me-4" href="index.html">
+                    <img src="https://www.playabacusindia.com/images/logo.jpg"
+                        alt="Ideal Play Abacus India - Best Abacus Training" style="height: 50px; width: auto;">
+                </a>
+
+                <!-- Mobile Toggler -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Offcanvas Menu -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
+                    <div class="offcanvas-header border-bottom">
+                        <img src="images/brandslogo/1.png" alt="IPA Abacus Brand Logo"
+                            style="height: 40px; width: auto;">
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul
-                            class="navbar-nav justify-content-start align-items-start align-items-md-start align-items-lg-center flex-grow-1 gap-2 gap-md-2 gap-lg-5">
+                        <ul class="navbar-nav justify-content-xl-center flex-grow-1 pe-3 gap-1 gap-xl-3 fw-semibold">
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.playabacusindia.com/index.html">Home</a>
-                            </li><span class="nav-line"></span>
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="https://www.playabacusindia.com/about-us.html">About US</a>
-                            </li><span class="nav-line"></span>
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle drop-box" type="button" data-bs-toggle="dropdown"
+                                <a class="nav-link" href="about-us.html">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
-                                    Our Courses
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item"
-                                            href="https://www.playabacusindia.com/our-courses/abacus.html">Abacus</a>
+                                    Courses <i class="fa-solid fa-chevron-down ms-2"></i>
+                                </a>
+                                <ul class="dropdown-menu border-0 shadow-lg animate slideIn rounded-3 mt-2">
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/abacus.html">Abacus</a>
                                     </li>
-                                    <li><a class="dropdown-item"
-                                            href="https://www.playabacusindia.com/our-courses/speed-arithmetic.html">Vedic
-                                            Mathematics</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="https://www.playabacusindia.com/our-courses/arka-kids.html">Arka
-                                            Kids</a>
-                                    </li>
-                                    <li><a class="dropdown-item"
-                                            href="https://www.playabacusindia.com/our-courses/creative-arts-india.html">Creative
-                                            Art India</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="https://www.playabacusindia.com/our-courses/phonics-star.html">Phonics
-                                            Star</a>
-                                    </li>
-                                    <li><a class="dropdown-item"
-                                            href="https://www.playabacusindia.com/our-courses/handwriting.html">Handwriting</a>
-                                    </li>
-                                    <li><a class="dropdown-item"
-                                            href="https://www.playabacusindia.com/our-courses/brite-english.html">Brite
+                                    <li><a class="dropdown-item px-3 py-2"
+                                            href="our-courses/speed-arithmetic.html">Vedic Mathematics</a></li>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/arka-kids.html">Arka
+                                            Kids</a></li>
+                                    <li><a class="dropdown-item px-3 py-2"
+                                            href="our-courses/creative-arts-india.html">Creative Art India</a></li>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/phonics-star.html">Phonics
+                                            Star</a></li>
+                                    <li><a class="dropdown-item px-3 py-2"
+                                            href="our-courses/handwriting.html">Handwriting</a></li>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/brite-english.html">Brite
                                             English</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="https://www.playabacusindia.com/our-courses/brain-tree.html">Brain
-                                            Tree</a>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/brain-tree.html">Brain
+                                            Tree</a></li>
+                                    <li><a class="dropdown-item px-3 py-2" href="our-courses/my-math.html">My Math</a>
                                     </li>
-                                    <li><a class="dropdown-item"
-                                            href="https://www.playabacusindia.com/our-courses/my-math.html">My Math</a>
-                                    </li>
+                                </ul>
+                            </li>
+                            <!--dfkvnfnvinerifnv-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Pages <i class="fa-solid fa-chevron-down ms-2"></i>
+                                </a>
+                                <ul class="dropdown-menu border-0 shadow-lg animate slideIn rounded-3 mt-2">
+
+                                    <li><a class="dropdown-item px-3 py-2" href="gallery.html">Gallery</a></li>
+                                    <li><a class="dropdown-item px-3 py-2"
+                                            href="https://www.playabacusindia.com/blog.html">Blog</a></li>
 
                                 </ul>
-                            </div>
-                            <span class="nav-line"></span>
+                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.playabacusindia.com/gallery.html">Gallery</a>
-                            </li><span class="nav-line"></span>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.playabacusindia.com/contact-us.html">Contact
-                                    US</a>
+                                <a class="nav-link" href="contact-us.html">Contact Us</a>
                             </li>
                         </ul>
-                        <a class="d-flex d-md-flex d-lg-none mt-4 text-white justify-content-start align-items-center gap-2 franchise-btn"
-                            href="https://idealplayabacusindia.com/FranchiseeLogin/login.asp">
-                            <h3 class="m-0">Franchisee Portal</h3><i
-                                class="fa-solid fa-exclamation fa-bounce text-warning"></i>
-                        </a>
-                        <div
-                            class="d-flex d-md-flex d-xl-none justify-content-center align-items-start flex-column w-100 gap-4 my-5">
-                            <div class="d-flex justify-content-center align-items-start flex-column text-white">
-                                <p class="m-0">MAIL</p>
-                                <a href="mailto:contact@playabacusindia.com"
-                                    class="text-white">contact@playabacusindia.com</a>
-                            </div>
-                            <div class="d-flex justify-content-center align-items-start flex-column text-white">
-                                <p class="m-0">CAll</p>
-                                <a href="tel:919940416989" class="text-white">+91 99404 16989</a>
+
+                        <!-- Desktop CTA -->
+                        <div class="d-none d-xl-flex align-items-center">
+                            <a href="contact-us.html"
+                                class="btn btn-warning text-nowrap text-dark fw-bold rounded-pill px-3 shadow-sm">
+                                Enquire Now
+                            </a>
+                        </div>
+
+                        <!-- Mobile Only Footer in Menu -->
+                        <div class="d-xl-none mt-4">
+                            <a href="contact-us.html" class="btn btn-primary w-100 rounded-pill mb-3">Enquire Now</a>
+                            <div class="d-flex justify-content-center gap-3 fs-4 mt-3 flex-wrap">
+                                <a href="https://www.facebook.com/idealplayabacusindiapvtltd/" class="text-secondary"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/ideal_play_abacus_india/" class="text-secondary"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://x.com/PlayAbacus" class="text-secondary"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://wa.me/919940416989" class="text-secondary"><i
+                                        class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ"
+                                    class="text-secondary"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.linkedin.com/company/ideal-play-abacus-india-pvt-ltd"
+                                    class="text-secondary"><i class="fa-brands fa-linkedin-in"></i></a>
                             </div>
                         </div>
-                        <div class="d-flex d-md-flex d-xl-none align-items-start w-100 h-100 flex-column ">
-                            <h3 class="text-white">Follow Us</h3>
-                            <div class="d-flex justify-content-center align-items-center gap-4 social-icon">
-                                <a href="https://www.facebook.com/idealplayabacusindiapvtltd/"><i
-                                        class="bi bi-facebook"></i></a>
-                                <a href="https://www.instagram.com/ideal_play_abacus_india/"><i
-                                        class="bi bi-instagram"></i></a>
-                                <a href="https://x.com/PlayAbacus"><i class="bi bi-twitter-x"></i></a>
-                                <a
-                                    href="https://wa.me/919940416989?text=Hi%20Ideal%20Play%20Abacus%2C%20I%20need%20more%20details"><i
-                                        class="bi bi-whatsapp"></i></a>
-                                <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ"><i
-                                        class="bi bi-youtube"></i></a>
-                                <a href="https://www.linkedin.com/company/ideal-play-abacus-india-pvt-ltd"><i
-                                        class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </nav>
+
+
     </header>
     <main style="overflow:hidden" class="w-100">
         <!-- banner -->
@@ -694,144 +684,112 @@
             </div>
         </section>
     </main>
-    <!-- footer -->
+    <!-- Footer -->
     <footer class="container-fluid pt-5 px-0">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-12 col-md-6 col-lg-2 order-lg-1 order-md-2 order-2">
-                    <div
-                        class="d-flex justify-content-center align-items-start w-100 flex-column gap-3 footer-content-box">
-                        <h4>Quick Links</h4>
-                        <div class="d-flex justify-content-center align-items-start w-100 flex-column gap-3">
-                            <a href="https://www.playabacusindia.com/index.html" class="fot-a">Home</a>
-                            <a href="https://www.playabacusindia.com/about-us.html" class="fot-a">About US</a>
-                            <a href="https://www.playabacusindia.com/gallery.html" class="fot-a">Gallery</a>
-                            <a href="https://www.playabacusindia.com/blog.html" class="fot-a">Blog</a>
-                            <a href="https://www.playabacusindia.com/events.html" class="fot-a">Events</a>
-                            <a href="https://www.playabacusindia.com/franchise.html" class="fot-a">Franchisee</a>
-                            <a href="https://www.playabacusindia.com/contact-us.html" class="fot-a">Contact us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-2 order-lg-2 order-md-3 order-3">
-                    <div
-                        class="d-flex justify-content-center align-items-start w-100 flex-column gap-3 footer-content-box">
-                        <h4>Our Courses</h4>
-                        <div class="d-flex justify-content-center align-items-start w-100 flex-column gap-3">
-                            <a href="https://www.playabacusindia.com/our-courses/abacus.html" class="fot-a">Abacus</a>
-                            <a href="https://www.playabacusindia.com/our-courses/speed-arithmetic.html"
-                                class="fot-a">Vedic Mathematics</a>
-                            <a href="https://www.playabacusindia.com/our-courses/arka-kids.html" class="fot-a">Arka
-                                Kids</a>
-                            <a href="https://www.playabacusindia.com/our-courses/creative-arts-india.html"
-                                class="fot-a">Creative Art India</a>
-                            <a href="https://www.playabacusindia.com/our-courses/phonics-star.html"
-                                class="fot-a">Phonics
-                                Spark</a>
-                            <a href="https://www.playabacusindia.com/our-courses/handwriting.html"
-                                class="fot-a">Handwriting</a>
-                            <a href="https://www.playabacusindia.com/our-courses/brite-english.html" class="fot-a">Brite
-                                English</a>
-                            <a href="https://www.playabacusindia.com/our-courses/brain-tree.html" class="fot-a">Brain
-                                Tree</a>
-                            <a href="https://www.playabacusindia.com/our-courses/my-math.html" class="fot-a">My Math</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 order-lg-3 order-md-4 order-4">
-                    <div
-                        class="d-flex justify-content-center align-items-start w-100 flex-column gap-3 footer-content-box">
-                        <h4>Our Branches</h4>
-                        <div class="d-flex justify-content-start align-items-center w-100 flex-wrap gap-3 state-box">
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-andhra-pradesh.html">Andhra
-                                Pradesh</a> <span> </span>
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-gujarat.html">Gujarat</a>
-                            <span> </span>
-                            <a
-                                href="https://www.playabacusindia.com/our-branches/abacus-in-karnataka.html">Karnataka</a>
-                            <span> </span>
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-kerala.html">Kerala</a>
-                            <span> </span>
-                            <a
-                                href="https://www.playabacusindia.com/our-branches/abacus-in-maharashtra.html">Maharashtra</a>
-                            <span> </span>
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-punjab.html">Punjab</a>
-                            <span> </span>
-                            <a
-                                href="https://www.playabacusindia.com/our-branches/abacus-in-rajasthan.html">Rajasthan</a>
-                            <span> </span>
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-tamilnadu.html">Tamil
-                                Nadu</a> <span> </span>
-                            <a
-                                href="https://www.playabacusindia.com/our-branches/abacus-in-telangana.html">Telangana</a>
-                            <span> </span>
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-west-bengal.html">West
-                                Bengal</a> <span> </span>
-                            <a
-                                href="https://www.playabacusindia.com/our-branches/abacus-in-andaman-and-nicobar-islands.html">Andaman
-                                and Nicobar Islands</a> <span> </span>
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-delhi.html">Delhi</a>
-                        </div>
-                    </div>
-                    <div
-                        class="d-flex justify-content-center align-items-start w-100 flex-column gap-3 footer-content-box mt-5">
-                        <h4>Global Presence</h4>
-                        <div class="d-flex justify-content-start align-items-center w-100 flex-wrap gap-3 state-box">
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-india.html">India</a> <span>
-                            </span>
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-zimbabwe.html">Zimbabwe</a>
-                            <span> </span>
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-south-africa.html">South
-                                Africa</a> <span> </span>
-                            <a
-                                href="https://www.playabacusindia.com/our-branches/abacus-in-australia.html">Australia</a>
-                            <span> </span>
-                            <a href="https://www.playabacusindia.com/our-branches/abacus-in-united-arab-emirates.html">United
-                                Arab Emirates</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 order-lg-4 order-md-1 order-1">
-                    <div
-                        class="d-flex justify-content-center align-items-center w-100 flex-column gap-5 footer-content-box">
-                        <img class="w-100" src="https://www.playabacusindia.com/images/logo.jpg" alt="logo">
-                        <div class="d-flex justify-content-center align-items-start w-100 flex-column gap-4">
-                            <a href="https://maps.app.goo.gl/2zDLx1TKKpa7nPZQ6" class="fot-a"><i
-                                    class="fa-solid fa-map-location-dot"></i> No.14, Thiruvika 3rd
-                                Street, Royapettah high road,
-                                Mylapore (opposite to Kesari school),
-                                Chennai -600 004 , Tamil Nadu , India.</a>
-                            <a href="tel:919940416989" class="fot-a"><i class="fa-solid fa-mobile-screen-button"></i>
-                                +91 99404 16989</a>
-                            <a href="mailto:contact@playabacusindia.com" class="fot-a"><i
-                                    class="fa-solid fa-envelope-open"></i>
-                                contact@playabacusindia.com</a>
-
-                        </div>
-                        <div class="d-flex justify-content-start me-auto align-items-center gap-2 imporatnt-links">
-                            <a href="https://www.playabacusindia.com/terms-and-conditions.html" class="fot-a">Terms &
-                                conditions</a> |
-                            <a href="https://www.playabacusindia.com/copyright-policy.html" class="fot-a">Copyright
-                                Policy</a>
-                        </div>
-                        <div class="d-flex justify-content-start align-items-center w-100 gap-4 social-icon">
-                            <h6 class="m-0">Follow US:</h6>
-                            <a href="https://www.facebook.com/idealplayabacusindiapvtltd/"><i
-                                    class="bi bi-facebook"></i></a>
-                            <a href="https://www.instagram.com/ideal_play_abacus_india/"><i
-                                    class="bi bi-instagram"></i></a>
-                            <a href="https://x.com/PlayAbacus"><i class="bi bi-twitter-x"></i></a>
-                            <a
-                                href="https://wa.me/919940416989?text=Hi%20Ideal%20Play%20Abacus%2C%20I%20need%20more%20details"><i
-                                    class="bi bi-whatsapp"></i></a>
-                            <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ"><i
-                                    class="bi bi-youtube"></i></a>
-                            <a href="https://www.linkedin.com/company/ideal-play-abacus-india-pvt-ltd"><i
-                                    class="bi bi-linkedin"></i></a>
-                        </div>
+        <div class="row g-4 gy-5">
+            <div class="col-12 col-sm-6 col-lg-2">
+                <div class="d-flex align-items-start w-100 flex-column gap-3 footer-content-box">
+                    <h4>Quick Links</h4>
+                    <div class="d-flex align-items-start w-100 flex-column gap-4">
+                        <a href="index.html" class="fot-a"><i class="bi bi-chevron-right small"></i> Home</a>
+                        <a href="about-us.html" class="fot-a"><i class="bi bi-chevron-right small"></i> About US</a>
+                        <a href="gallery.html" class="fot-a"><i class="bi bi-chevron-right small"></i> Gallery</a>
+                        <a href="https://www.playabacusindia.com/blog.html" class="fot-a"><i
+                                class="bi bi-chevron-right small"></i> Blog</a>
+                        <a href="franchise.html" class="fot-a"><i class="bi bi-chevron-right small"></i>
+                            Franchisee</a>
+                        <a href="contact-us.html" class="fot-a"><i class="bi bi-chevron-right small"></i> Contact
+                            us</a>
                     </div>
                 </div>
             </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <div class="d-flex align-items-start w-100 flex-column gap-3 footer-content-box">
+                    <h4>Our Courses</h4>
+                    <div class="d-flex align-items-start w-100 flex-column gap-3">
+                        <a href="our-courses/abacus.html" class="fot-a"><i class="bi bi-chevron-right small"></i>
+                            Abacus</a>
+                        <a href="our-courses/speed-arithmetic.html" class="fot-a"><i
+                                class="bi bi-chevron-right small"></i> Vedic Maths</a>
+                        <a href="our-courses/arka-kids.html" class="fot-a"><i class="bi bi-chevron-right small"></i>
+                            Arka Kids</a>
+                        <a href="our-courses/creative-arts-india.html" class="fot-a"><i
+                                class="bi bi-chevron-right small"></i> Creative Art</a>
+                        <a href="our-courses/phonics-star.html" class="fot-a"><i class="bi bi-chevron-right small"></i>
+                            Phonics</a>
+                        <a href="our-courses/handwriting.html" class="fot-a"><i class="bi bi-chevron-right small"></i>
+                            Handwriting</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="d-flex align-items-start w-100 flex-column gap-3 footer-content-box">
+                    <h4>Our Branches</h4>
+                    <div class="d-flex justify-content-start align-items-center w-100 flex-wrap gap-2 state-box">
+                        <a href="our-branches/abacus-in-andhra-pradesh.html">Andhra Pradesh</a>
+                        <a href="our-branches/abacus-in-gujarat.html">Gujarat</a>
+                        <a href="our-branches/abacus-in-karnataka.html">Karnataka</a>
+                        <a href="our-branches/abacus-in-kerala.html">Kerala</a>
+                        <a href="our-branches/abacus-in-maharashtra.html">Maharashtra</a>
+                        <a href="our-branches/abacus-in-tamilnadu.html">Tamil Nadu</a>
+                        <a href="our-branches/abacus-in-telangana.html">Telangana</a>
+                        <a href="our-branches/abacus-in-punjab.html">Punjab</a>
+                        <a href="our-branches/abacus-in-rajasthan.html">Rajasthan</a>
+                        <a href="our-branches/abacus-in-west-delhi.html">Delhi</a>
+                        <a href="our-branches/abacus-in-andaman-and-nicobar-islands.html">Andaman and Nicobar
+                            Islands</a>
+                        <a href="our-branches/abacus-in-west-bengal.html">West Bengal</a>
+                        <a href="our-branches/abacus-in-india.html"
+                            class="fw-bold text-white opacity-100 border-accent">India</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-start w-100 flex-column gap-3 footer-content-box mt-4">
+                    <h4>Global Presence</h4>
+                    <div class="d-flex justify-content-start align-items-center w-100 flex-wrap gap-2 state-box">
+                        <a href="our-branches/abacus-in-india.html">India</a>
+                        <a href="our-branches/abacus-in-zimbabwe.html">Zimbabwe</a>
+                        <a href="our-branches/abacus-in-south-africa.html">South Africa</a>
+                        <a href="our-branches/abacus-in-australia.html">Australia</a>
+                        <a href="our-branches/abacus-in-united-arab-emirates.html">UAE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="d-flex align-items-start w-100 flex-column gap-4 footer-content-box">
+                    <a href="https://www.playabacusindia.com/" class="mb-2"><img
+                            src="https://www.playabacusindia.com/images/logo.jpg" alt="logo"
+                            style="max-height: 60px; width: auto; border-radius: 8px;"></a>
+                    <div class="d-flex align-items-start w-100 flex-column gap-3">
+                        <a href="https://maps.app.goo.gl/2zDLx1TKKpa7nPZQ6" class="fot-a align-items-start lh-base">
+                            <i class="bi bi-geo-alt-fill mt-1"></i>
+                            <span>No.14, Thiruvika 3rd Street, Royapettah high road, Mylapore, Chennai - 600 004, Tamil
+                                Nadu, India.</span>
+                        </a>
+                        <a href="tel:919940416989" class="fot-a">
+                            <i class="bi bi-phone-fill"></i> +91 99404 16989
+                        </a>
+                        <a href="mailto:contact@playabacusindia.com" class="fot-a">
+                            <i class="bi bi-envelope-at-fill"></i> contact@playabacusindia.com
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center w-100 gap-3 social-icon mt-2"
+                        id="footer-social-section">
+                        <a href="https://www.facebook.com/idealplayabacusindiapvtltd/" title="Facebook"><img
+                                src="images/socialicons/facebook.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/ideal_play_abacus_india/" title="Instagram"><img
+                                src="images/socialicons/instagram.svg" alt="Instagram"></a>
+                        <a href="https://x.com/PlayAbacus" title="X (Twitter)"><img src="images/socialicons/x-white.svg"
+                                alt="X"></a>
+                        <a href="https://wa.me/919940416989?text=Hi%20Ideal%20Play%20Abacus..." title="WhatsApp"><img
+                                src="images/socialicons/whatsapp.svg" alt="WhatsApp"></a>
+                        <a href="https://www.youtube.com/channel/UCot9VJkz3JArME500R00FVQ" title="YouTube"><img
+                                src="images/socialicons/youtube.svg" alt="YouTube"></a>
+                        <a href="https://www.linkedin.com/company/ideal-play-abacus-india-pvt-ltd" title="LinkedIn"><img
+                                src="images/socialicons/linkedin.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <div id="website-list" class="container-fluid py-2 mt-4">
             <div class="container">
@@ -861,170 +819,110 @@
             </div>
         </div>
     </footer>
-    <!-- bottom menu -->
-    <div id="bottom-operator">
-        <a href="#download-brochure" download class="bottom-call-tel url-container btn-animation btn-animation4 ">
-            <span>DOWNLOAD BROCHURE</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                    d="M12 15.575q-.2 0-.375-.062T11.3 15.3l-3.6-3.6q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L11 12.15V5q0-.425.288-.712T12 4t.713.288T13 5v7.15l1.875-1.875q.3-.3.713-.288t.712.313q.275.3.288.7t-.288.7l-3.6 3.6q-.15.15-.325.213t-.375.062M6 20q-.825 0-1.412-.587T4 18v-2q0-.425.288-.712T5 15t.713.288T6 16v2h12v-2q0-.425.288-.712T19 15t.713.288T20 16v2q0 .825-.587 1.413T18 20z" />
-            </svg>
-        </a>
-        <a href="#whatsapp" onclick="msgBox()" class="bottom-call-tel email-container btn-animation btn-animation3">
-            <span>Whatsapp</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01" />
-            </svg>
-        </a>
-        <div class=" bottom-call-tel telegram-container btn-animation btn-animation2">
-            <span>Quick Msg</span>
 
-            <style>
-                .shake-animation {
-                    animation: shake 3s ease-in-out infinite;
-                }
-
-                @keyframes shake {
-                    0% {
-                        transform: translate(0, 0);
-                    }
-
-                    10% {
-                        transform: translate(-2px, -2px);
-                    }
-
-                    20% {
-                        transform: translate(2px, 2px);
-                    }
-
-                    30% {
-                        transform: translate(-2px, -2px);
-                    }
-
-
-                    40% {
-                        transform: translate(0, 0);
-                    }
-
-                    100% {
-                        transform: translate(0, 0);
-                    }
-                }
-            </style>
-            <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"
-                class="shake-animation">
-                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                    <path
-                        d="M21.9789 3.92863L18.3092 20.1405C18.0923 21.1006 17.5156 21.3318 16.7432 20.8598L11.8286 17.3506L9.71723 19.4068C9.47599 19.6543 9.25223 19.8788 8.76799 19.8788L9.07323 14.9046L17.4842 7.64723C17.8163 7.34501 17.4096 7.18168 16.9861 7.4839L6.56382 14.6366L1.70882 13.0997C0.768968 12.8026 0.752477 12.1443 1.88173 11.6941L20.4541 3.32163C21.1609 3.03145 21.746 3.41812 21.9789 3.92863Z" />
-                </g>
-            </svg>
+    <!-- Modern Bootstrap Offcanvas Contact Form (Bottom Sheet) -->
+    <div class="offcanvas offcanvas-bottom h-auto rounded-top-4" tabindex="-1" id="contactOffcanvas"
+        aria-labelledby="contactOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold text-primary" id="contactOffcanvasLabel">Get in Touch</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <a href="tel:919940416989" class=" bottom-call-tel call-container btn-animation btn-animation1 ">
-            <span>CALL</span>
-            <svg xmlns=" http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24">
-                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                    <path stroke-dasharray="64" stroke-dashoffset="64"
-                        d="M8 3C8.5 3 10.5 7.5 10.5 8C10.5 9 9 10 8.5 11C8 12 9 13 10 14C10.3943 14.3943 12 16 13 15.5C14 15 15 13.5 16 13.5C16.5 13.5 21 15.5 21 16C21 18 19.5 19.5 18 20C16.5 20.5 15.5 20.5 13.5 20C11.5 19.5 10 19 7.5 16.5C5 14 4.5 12.5 4 10.5C3.5 8.5 3.5 7.5 4 6C4.5 4.5 6 3 8 3Z">
-                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0" />
-                        <animateTransform attributeName="transform" begin="0.6s;lineMdPhoneCallLoop0.begin+2.6s"
-                            dur="0.5s" type="rotate"
-                            values="0 12 12;15 12 12;0 12 12;-12 12 12;0 12 12;12 12 12;0 12 12;-15 12 12;0 12 12" />
-                    </path>
-                    <path stroke-dasharray="4" stroke-dashoffset="4"
-                        d="M14 7.04404C14.6608 7.34734 15.2571 7.76718 15.7624 8.27723M16.956 10C16.6606 9.35636 16.2546 8.77401 15.7624 8.27723"
-                        opacity="0">
-                        <set id="lineMdPhoneCallLoop0" attributeName="opacity"
-                            begin="0.7s;lineMdPhoneCallLoop0.begin+2.7s" to="1" />
-                        <animate fill="freeze" attributeName="stroke-dashoffset"
-                            begin="0.7s;lineMdPhoneCallLoop0.begin+2.7s" dur="0.2s" values="4;8" />
-                        <animate fill="freeze" attributeName="stroke-dashoffset"
-                            begin="1.3s;lineMdPhoneCallLoop0.begin+3.3s" dur="0.3s" values="0;4" />
-                        <set attributeName="opacity" begin="1.6s;lineMdPhoneCallLoop0.begin+3.6s" to="0" />
-                    </path>
-                    <path stroke-dasharray="10" stroke-dashoffset="10"
-                        d="M20.748 9C20.3874 7.59926 19.6571 6.347 18.6672 5.3535M15 3.25203C16.4105 3.61507 17.6704 4.3531 18.6672 5.3535"
-                        opacity="0">
-                        <set attributeName="opacity" begin="1s;lineMdPhoneCallLoop0.begin+3s" to="1" />
-                        <animate fill="freeze" attributeName="stroke-dashoffset"
-                            begin="1s;lineMdPhoneCallLoop0.begin+3s" dur="0.2s" values="10;20" />
-                        <animate fill="freeze" attributeName="stroke-dashoffset"
-                            begin="1.5s;lineMdPhoneCallLoop0.begin+3.5s" dur="0.3s" values="0;10" />
-                        <set attributeName="opacity" begin="1.8s;lineMdPhoneCallLoop0.begin+3.8s" to="0" />
-                    </path>
-                </g>
-            </svg>
-        </a>
-    </div>
-    <!-- form -->
-    <div id="tele-chatbox-unique">
-        <div class="tele-chatbox-header ">
-            <img style="border-radius: 10px;" class="h-50" src="https://www.playabacusindia.com/images/logo.jpg"
-                alt="IPA">
-            <div onclick="msgBox()" id="tele-close"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                    viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                        d="M8.4 17L7 15.6l3.6-3.6L7 8.425l1.4-1.4l3.6 3.6l3.575-3.6l1.4 1.4l-3.6 3.575l3.6 3.6l-1.4 1.4L12 13.4z" />
-                </svg></div>
-        </div>
-        <div class="tele-chatbox-body">
-            <div class="inquiry-type">
-                <label><input type="radio" name="inquiry_type" value="Franchise Inquiry" required=""> Franchise
-                    Inquiry</label>
-                <label><input type="radio" name="inquiry_type" value="Student Inquiry"> Student Inquiry</label>
-                <label><input type="radio" name="inquiry_type" value="Others"> Others</label>
-            </div>
-
-            <div class="">
-
-                <textarea placeholder="Your Message" class="form-control" id="message" name="message" rows="3" required
-                    oninput="limitLetters(this, 60)"></textarea>
-                <div id="wordCountMsg" style="color: gray; font-size: 12px;">0 / 60 letters</div>
-            </div>
-            <input id="tele-name" class="form-control " placeholder="Your Name" pattern="\d{10}" required type="text">
-            <input id="tele-email" class="form-control" placeholder="Your E-Mail"
-                pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required type="email">
-
-            <div style="display: flex; align-items:center; gap:1rem; width:100%;">
-                <div name="country-codes" id="country-select">
-                    <label style="color: black !important;" for="searchInput" onclick="toggleCon()" class="val"
-                        data-value="+91">
-                        <img src="https://flagcdn.com/w320/in.png" alt="Abacus class and Franchises">
-                        +91
-                    </label>
-                    <div class="dropdown">
-                        <div class="items"></div>
-                        <input type="text" id="searchInput" placeholder="Search country code..." />
+        <div class="offcanvas-body p-4">
+            <div class="inquiry-type mb-3">
+                <div class="d-flex gap-3 flex-wrap">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inquiry_type" id="inqFranchise"
+                            value="Franchise Inquiry" required checked>
+                        <label class="form-check-label" for="inqFranchise">Franchise</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inquiry_type" id="inqStudent"
+                            value="Student Inquiry">
+                        <label class="form-check-label" for="inqStudent">Student</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inquiry_type" id="inqOther" value="Others">
+                        <label class="form-check-label" for="inqOther">Others</label>
                     </div>
                 </div>
-                <input id="tele-phone" class="form-control " placeholder="Your Phone Number" required type="text">
             </div>
-            <div style="display: flex; align-items:center; gap:1rem; width:100%;">
-                <canvas id="captchaCanvas" class="opacity-75" width="100" height="35"></canvas>
-                <div onclick="createCaptcha()" class="captcha-reload d-flex justify-content-center align-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33.58" height="32" viewBox="0 0 256 244">
-                        <path fill="#1C3AA9"
-                            d="M211.3 84.966a87.114 87.114 0 0 0-.087-3.653V12.251l-19.092 19.093C176.494 12.217 152.723 0 126.096 0C98.387 0 73.77 13.226 58.21 33.71l31.295 31.624a41.463 41.463 0 0 1 12.677-14.224c5.464-4.263 13.205-7.75 23.914-7.75c1.294 0 2.293.152 3.026.436c13.269 1.048 24.77 8.37 31.541 18.998L138.51 84.946c28.059-.11 59.756-.174 72.788.015" />
-                        <path fill="#4285F4"
-                            d="M125.599.003a87.114 87.114 0 0 0-3.653.087H52.884l19.093 19.093C52.85 34.809 40.633 58.581 40.633 85.207c0 27.71 13.226 52.327 33.71 67.888l31.624-31.295a41.463 41.463 0 0 1-14.224-12.678c-4.263-5.463-7.75-13.205-7.75-23.914c0-1.293.152-2.292.436-3.026c1.048-13.268 8.37-24.769 18.998-31.54l22.152 22.152c-.11-28.06-.175-59.757.015-72.789" />
-                        <path fill="#ABABAB"
-                            d="M40.636 85.205c.004 1.224.032 2.441.087 3.653v69.062l19.093-19.093c15.626 19.127 39.398 31.344 66.024 31.344c27.71 0 52.327-13.226 67.888-33.71l-31.295-31.624a41.463 41.463 0 0 1-12.678 14.224c-5.463 4.263-13.205 7.75-23.914 7.75c-1.293 0-2.292-.152-3.026-.437c-13.268-1.047-24.769-8.37-31.54-18.997l22.152-22.153c-28.06.11-59.757.175-72.789-.014" />
-                        <path fill="#A6A6A6"
-                            d="M55.013 203.168c-2.075 0-3.936.393-5.582 1.18a11.572 11.572 0 0 0-4.187 3.302c-1.127 1.431-1.995 3.167-2.603 5.206c-.59 2.022-.886 4.285-.886 6.79v7.22c0 2.522.296 4.794.886 6.816c.608 2.022 1.467 3.748 2.577 5.18c1.109 1.43 2.45 2.531 4.025 3.3c1.574.77 3.346 1.155 5.314 1.155c2.022 0 3.793-.296 5.314-.886c1.539-.59 2.827-1.44 3.864-2.55c1.038-1.127 1.834-2.486 2.389-4.079c.573-1.592.912-3.4 1.02-5.421h-4.965c-.125 1.556-.34 2.89-.644 3.999c-.304 1.091-.752 1.995-1.342 2.71c-.573.698-1.324 1.217-2.255 1.557c-.912.322-2.04.483-3.381.483c-1.431 0-2.648-.313-3.65-.94c-1.002-.644-1.816-1.52-2.442-2.63c-.608-1.109-1.056-2.406-1.342-3.891c-.268-1.485-.403-3.086-.403-4.804v-7.273c0-1.843.161-3.516.483-5.019c.34-1.502.85-2.782 1.53-3.837c.68-1.056 1.539-1.87 2.577-2.443c1.037-.59 2.272-.885 3.703-.885c1.199 0 2.228.179 3.086.537a5.01 5.01 0 0 1 2.147 1.61c.573.715 1.011 1.628 1.315 2.737c.305 1.11.51 2.433.618 3.972h4.965c-.09-2.111-.42-3.98-.993-5.609c-.573-1.628-1.369-2.997-2.389-4.106c-1.02-1.11-2.263-1.95-3.73-2.523c-1.45-.572-3.122-.859-5.019-.859zm121.2 0c-2.076 0-3.937.393-5.583 1.18a11.572 11.572 0 0 0-4.187 3.302c-1.127 1.431-1.994 3.167-2.603 5.206c-.59 2.022-.885 4.285-.885 6.79v7.22c0 2.522.295 4.794.885 6.816c.608 2.022 1.467 3.748 2.577 5.18c1.109 1.43 2.45 2.531 4.025 3.3c1.575.77 3.346 1.155 5.314 1.155c2.022 0 3.793-.296 5.314-.886c1.539-.59 2.827-1.44 3.865-2.55c1.037-1.127 1.833-2.486 2.388-4.079c.573-1.592.913-3.4 1.02-5.421h-4.965c-.125 1.556-.34 2.89-.644 3.999c-.304 1.091-.751 1.995-1.342 2.71c-.572.698-1.324 1.217-2.254 1.557c-.913.322-2.04.483-3.382.483c-1.431 0-2.648-.313-3.65-.94c-1.002-.644-1.816-1.52-2.442-2.63c-.608-1.109-1.055-2.406-1.342-3.891c-.268-1.485-.402-3.086-.402-4.804v-7.273c0-1.843.16-3.516.483-5.019c.34-1.502.85-2.782 1.53-3.837c.68-1.056 1.538-1.87 2.576-2.443c1.038-.59 2.272-.885 3.703-.885c1.2 0 2.228.179 3.087.537c.858.34 1.574.876 2.147 1.61c.572.715 1.01 1.628 1.315 2.737c.304 1.11.51 2.433.617 3.972h4.965c-.09-2.111-.42-3.98-.993-5.609c-.573-1.628-1.369-2.997-2.389-4.106c-1.02-1.11-2.263-1.95-3.73-2.523c-1.45-.572-3.122-.859-5.019-.859zm-92.911.537L70.715 242.78h5.045l3.033-10.199h13.204l3.086 10.199h5.046l-12.614-39.075zm22.14 0v39.075h4.911v-15.298h7.541c1.879 0 3.543-.26 4.992-.778c1.45-.537 2.666-1.306 3.65-2.308c1.002-1.002 1.753-2.237 2.254-3.704c.52-1.485.779-3.166.779-5.045c0-1.736-.26-3.328-.779-4.777c-.5-1.467-1.243-2.729-2.227-3.784c-.984-1.074-2.21-1.906-3.677-2.496c-1.45-.59-3.113-.886-4.992-.886zm27.884 0v4.24h10.252v34.835h4.91v-34.835h10.28v-4.24zm61.646 0v39.075h4.91v-18.062h15.728v18.062h4.938v-39.075h-4.938v16.8h-15.727v-16.8zm44.2 0l-12.586 39.075h5.046l3.032-10.199h13.204l3.087 10.199H256l-12.614-39.075zm-128.82 4.24h7.542c1.199 0 2.218.214 3.06.644c.858.43 1.556 1.002 2.093 1.718a6.9 6.9 0 0 1 1.207 2.495c.269.93.403 1.897.403 2.899c0 1.11-.134 2.129-.403 3.06a6.412 6.412 0 0 1-1.207 2.388c-.537.662-1.235 1.18-2.094 1.556c-.84.376-1.86.564-3.06.564h-7.54zm-24.958 2.63l5.341 17.766H80.081zm155.872 0l5.34 17.766h-10.654zm-231.175 2.63c-1.235 0-2.3.313-3.194.94c-.877.626-1.61 1.476-2.2 2.549l-.081-2.952H0v29.038h4.75v-20.773c.448-1.235 1.083-2.21 1.906-2.925c.84-.716 1.905-1.074 3.193-1.074c.412 0 .779.018 1.1.054c.323.018.672.062 1.047.134l-.026-4.616a1.628 1.628 0 0 0-.35-.108a3.08 3.08 0 0 0-.482-.134a5.342 5.342 0 0 0-.564-.08a2.49 2.49 0 0 0-.483-.054zm15.968 0c-1.378 0-2.71.242-3.999.725c-1.288.483-2.433 1.279-3.435 2.388c-.984 1.092-1.78 2.523-2.388 4.294c-.609 1.754-.913 3.91-.913 6.468v3.274c0 2.219.26 4.142.779 5.77c.518 1.628 1.26 2.98 2.227 4.053a9.176 9.176 0 0 0 3.57 2.362c1.395.519 2.96.778 4.696.778c1.252 0 2.37-.125 3.355-.376c1.002-.25 1.887-.572 2.657-.966a9.324 9.324 0 0 0 1.986-1.395a10.676 10.676 0 0 0 1.422-1.61l-2.469-3.006c-.394.483-.814.93-1.261 1.341c-.448.394-.94.743-1.476 1.047a7.733 7.733 0 0 1-1.772.671a8.985 8.985 0 0 1-2.173.242c-2.201 0-3.892-.707-5.073-2.12c-1.163-1.414-1.744-3.677-1.744-6.79v-.672h16.21v-2.764c0-2.218-.188-4.178-.564-5.877c-.376-1.7-.975-3.131-1.798-4.294a7.796 7.796 0 0 0-3.167-2.63c-1.288-.609-2.845-.913-4.67-.913m0 4.08c1.038 0 1.897.187 2.577.563a4.15 4.15 0 0 1 1.61 1.583c.411.68.707 1.494.886 2.443c.196.93.322 1.959.375 3.086v.644H20.074c.072-1.628.269-2.979.59-4.053c.323-1.073.743-1.923 1.262-2.549c.537-.644 1.154-1.091 1.852-1.342a6.706 6.706 0 0 1 2.281-.376z" />
-                    </svg>
+
+            <div class="mb-3">
+                <textarea placeholder="Your Message" class="form-control" id="message" name="message" rows="3" required
+                    oninput="limitLetters(this, 100)"></textarea>
+                <div id="wordCountMsg" class="text-muted small text-end mt-1">0 / 100</div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-12">
+                    <input id="tele-name" class="form-control" placeholder="Your Name" pattern="\d{10}" required
+                        type="text">
                 </div>
-                <input type="text" class="form-control " id="captcha" name="captcha" placeholder="Enter Captcha">
+                <div class="col-12">
+                    <input id="tele-email" class="form-control" placeholder="Your E-Mail" required type="email">
+                </div>
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-end-0">
+                            <img src="https://flagcdn.com/w20/in.png" alt="India" style="width: 20px;">
+                            <span class="ms-1 small">+91</span>
+                        </span>
+                        <input id="tele-phone" class="form-control border-start-0 ps-0" placeholder="Phone Number"
+                            required type="tel">
+                    </div>
+                </div>
+                <!-- Simplified Static Captcha for Mobile UX -->
+                <div class="col-12">
+                    <div class="d-flex align-items-center gap-2">
+                        <div
+                            class="bg-light px-3 py-2 rounded text-decoration-line-through text-muted letter-spacing-2 user-select-none">
+                            XD5F</div>
+                        <input type="text" class="form-control" id="captcha" name="captcha"
+                            placeholder="Enter Captcha: XD5F">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button id="sendBtn" class="btn btn-primary w-100 rounded-pill fw-bold py-3">Send Message</button>
+                </div>
             </div>
-            <button id="sendBtn"><span>Send
-                    Message</span></button>
         </div>
     </div>
-    <!-- form -->
-    <script defer src="form/biz-msg-box/script.js"></script>
-    <!-- bootstarp -->
+
+    <!-- Bootstrap -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://www.playabacusindia.com/js/swiper.js"></script>
+
     <!-- custom js -->
-    <script defer src="js/script.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Go to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top functionality
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        };
+
+        backToTopButton.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
 </body>
 
 </html>
+
+
