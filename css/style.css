@@ -1354,6 +1354,7 @@ img {
     display: inline-block;
     border: none;
     box-shadow: 0 5px 15px rgba(46, 125, 50, 0.2);
+    white-space: nowrap;
 }
 
 #learn .theme-btn-3:hover {
@@ -1361,6 +1362,21 @@ img {
     color: var(--primary-clr) !important;
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(255, 183, 0, 0.3);
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 991px) {
+    #learn .theme-btn-3 {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #learn .theme-btn-3 {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
 }
 
 #learn h4 {
@@ -2215,7 +2231,8 @@ footer {
     }
 
     .theme-btn-3 {
-        width: 80% !important;
+        width: auto !important;
+        min-width: min-content;
     }
 
     #cta {
