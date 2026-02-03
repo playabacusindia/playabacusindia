@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -315,7 +315,7 @@
     </header>
     <main style="overflow:hidden" class="w-100">
         <!-- banner -->
-        <section id="banner" class="container-fluid mt-5 pt-3 pt-md-0 pt-lg-5">
+        <section id="banner" class="container-fluid pt-0 pt-md-0">
             <div class="row">
                 <div class="col-12 p-0">
                     <div id="banner-slide" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -1427,6 +1427,31 @@
     <!-- custom js -->
     <script defer src="https://www.playabacusindia.com/js/script.js"></script>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top functionality
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        };
+
+        backToTopButton.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
 </body>
 
 </html>
+
