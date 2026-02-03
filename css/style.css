@@ -524,7 +524,7 @@ img {
 .hero-section {
     background: linear-gradient(135deg, rgba(237, 247, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
     min-height: 80vh;
-    padding-top: 80px;
+    padding-top: 20px;
 }
 
 .hero-shape {
@@ -684,7 +684,7 @@ img {
 @media (max-width: 991px) {
     .hero-section {
         text-align: center;
-        padding-top: 40px;
+        padding-top: 10px;
     }
 
     .hero-content {
@@ -2035,7 +2035,7 @@ footer {
         /* Remove fixed height to allow flexible hero content */
         height: auto;
         min-height: auto;
-        padding-top: 80px;
+        padding-top: 20px;
         /* Space for fixed header */
         margin-top: 0 !important;
         background: var(--light-bg);
@@ -2044,7 +2044,7 @@ footer {
     /* Modern Hero Section Styles */
     .hero-section {
         position: relative;
-        padding: 40px 0;
+        padding: 20px 0;
     }
 
     .hero-title {
