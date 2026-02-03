@@ -163,6 +163,82 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// ==========================================
+// Enquiry Modal Logic (Bootstrap Modal)
+// ==========================================
+document.addEventListener('DOMContentLoaded', function () {
+  const modalSendBtn = document.getElementById('modalSendBtn');
+
+  if (modalSendBtn) {
+    modalSendBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Get Values (Modal IDs)
+      const name = document.getElementById('modal-name').value.trim();
+      const phone = document.getElementById('modal-phone').value.trim();
+      const email = document.getElementById('modal-email').value.trim();
+      const message = document.getElementById('modal-message').value.trim();
+      // Scoped query selector for modal's radio buttons
+      const typeInput = document.querySelector('#enquiryModal input[name="inquiry_type"]:checked');
+      const type = typeInput ? typeInput.value : 'Franchise Inquiry';
+
+      // Basic Validation
+      if (!name || !phone || !email || !message) {
+        alert('Please fill all required fields.');
+        return;
+      }
+
+      // Static Captcha Validation (Removed as per request)
+
+
+      modalSendBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+      modalSendBtn.disabled = true;
+
+      // Construct Message Payload
+      const fullMessage = `New Modal Inquiry:\n\nType: ${type}\nName: ${name}\nPhone: +91 ${phone}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+      const payload = new URLSearchParams();
+      payload.append('message', fullMessage);
+      // Legacy placeholder requirement
+      payload.append('photo_url', 'https://placehold.co/100x100/png');
+
+      // Submit
+      fetch('https://www.playabacusindia.com/form/tele-abacus/tele-chatbox.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: payload
+      })
+        .then(response => {
+          if (response.ok) {
+            alert('Thank you! Your message has been sent successfully.');
+            // Reset Form
+            document.getElementById('modal-name').value = '';
+            document.getElementById('modal-phone').value = '';
+            document.getElementById('modal-email').value = '';
+            document.getElementById('modal-message').value = '';
+
+            // Close Modal
+            const modalEl = document.getElementById('enquiryModal');
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) modal.hide();
+          } else {
+            throw new Error('Network response was not ok.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Something went wrong. Please try again later.');
+        })
+        .finally(() => {
+          modalSendBtn.innerHTML = 'Send Message';
+          modalSendBtn.disabled = false;
+        });
+    });
+  }
+});
+
 // Character Limiter Helper
 window.limitLetters = function (textarea, max) {
   if (textarea.value.length > max) {
