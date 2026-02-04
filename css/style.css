@@ -2856,3 +2856,11 @@ footer {
 .overflow-hidden-x {
     overflow-x: hidden;
 }
+
+.hover-primary:hover {
+    color: var(--primary-clr) !important;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
