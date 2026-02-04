@@ -745,21 +745,21 @@ img {
 /* Offcanvas Mobile Tweak */
 .offcanvas-header {
     background: #f8f9fa;
-    padding: 15px 20px;
+    padding: 10px 15px;
     /* More compact header */
 }
 
 .offcanvas-body {
-    padding: 20px !important;
+    padding: 10px !important;
     /* Tighten overall body padding */
 }
 
 .offcanvas-body .nav-link {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     /* Slightly larger for mobile readability */
     border-bottom: none;
     /* Removed border for a cleaner, gap-free look */
-    padding: 6px 18px !important;
+    padding: 5px 15px !important;
     /* Reduced vertical padding */
     /* Standardized with main navbar */
     color: var(--text-clr) !important;
@@ -2588,8 +2588,8 @@ footer {
     transition: all 0.3s ease;
     overflow: hidden;
     position: relative;
-    /* Maintain background image logic but enhance it */
-    /*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%), var(--course-img);/*/
+    /* Abstract background with subtle overlay if needed */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), var(--course-img);
     background-size: cover;
     background-position: center;
     min-height: 350px;
@@ -2621,17 +2621,18 @@ footer {
 }
 
 .course-box h4 {
-    color: var(--white-clr);
+    color: var(--secondary-clr);
     font-size: 1.5rem;
     margin-bottom: 5px;
     font-weight: 700;
 }
 
 .course-box p {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-clr);
     font-size: 0.95rem;
     display: block;
     margin-top: 5px;
+    font-weight: 600;
 }
 
 /* Enhancing the bottom part of course slide */
@@ -2723,4 +2724,135 @@ footer {
 #footer-social-section a img {
     width: 30px !important;
     height: 30px !important;
+}
+
+/* 25. 404 Error Page */
+.error-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    padding: 100px 0;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.error-404 {
+    font-size: clamp(8rem, 20vw, 12rem);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -5px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+.error-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-clr);
+    margin-bottom: 1.5rem;
+}
+
+.error-text {
+    color: #64748b;
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* 26. Utility Classes */
+.img-cover-rounded {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.logo-brand {
+    height: 50px;
+    width: auto;
+}
+
+.brand-logo-small {
+    height: 40px;
+    width: auto;
+}
+
+.youtube-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.youtube-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+}
+
+.logo-max-60 {
+    max-height: 60px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.icon-box-lg {
+    width: 80px;
+    height: 80px;
+}
+
+/* 27. Course Backgrounds */
+.bg-course-1,
+.bg-course-2,
+.bg-course-3,
+.bg-course-5,
+.bg-course-6,
+.bg-course-7,
+.bg-course-8,
+.bg-course-9 {
+    --course-img: url(../images/abstract-bg.svg);
+}
+
+/* 28. Theme Colors Utility */
+.theme-blue {
+    --why-icon-box-clr: #2d97eb;
+    color: #2d97eb;
+}
+
+.theme-green {
+    --why-icon-box-clr: #17a43b;
+    color: #17a43b;
+}
+
+.theme-orange {
+    --why-icon-box-clr: #f59e0b;
+    color: #f59e0b;
+}
+
+.theme-orange-deep {
+    --why-icon-box-clr: #fb9300;
+    color: #fb9300;
+}
+
+.theme-cyan {
+    --why-icon-box-clr: #2c96ec;
+    color: #2c96ec;
+}
+
+.flag-icon-sm {
+    width: 20px;
+}
+
+.overflow-hidden-x {
+    overflow-x: hidden;
 }
