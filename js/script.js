@@ -270,3 +270,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// ==========================================
+// Main Contact Page Form Logic (Redesigned Form)
+// ==========================================
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contactForm');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const btn = contactForm.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+
+      // Get Values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !phone || !message) {
+        alert('Please fill all fields.');
+        return;
+      }
+
+      // Loading State
+      btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Sending...';
+      btn.disabled = true;
+
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('phone', phone);
+      formData.append('message', message);
+
+      fetch('mail.php', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === 'success') {
+            alert('Thank you! Your message has been sent successfully.');
+            contactForm.reset();
+          } else {
+            alert('Error: ' + data.message);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Something went wrong. Please check your internet connection or try again later.');
+        })
+        .finally(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        });
+    });
+  }
+});
