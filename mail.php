@@ -61,7 +61,8 @@ try {
     //  RECIPIENTS
     // =================================================
     $mail->setFrom('contact@playabacusindia.com', 'Play Abacus India Web');
-    $mail->addAddress('contact@playabacusindia.com');           // Add a recipient (Where you want to receive emails)
+    $mail->addAddress('contact@playabacusindia.com');           // Main recipient
+    $mail->addAddress('idealplayabacus20@gmail.com');          // Additional recipient
     $mail->addReplyTo($email, $name);                           // Reply to the user
 
     // =================================================
