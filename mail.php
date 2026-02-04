@@ -35,6 +35,7 @@ $name = $_POST['name'] ?? '';
 $email = $_POST['email'] ?? '';
 $phone = $_POST['phone'] ?? '';
 $message = $_POST['message'] ?? '';
+$type = $_POST['type'] ?? 'General Inquiry';
 
 // Basic Validation
 if (empty($name) || empty($email) || empty($phone) || empty($message)) {
@@ -69,11 +70,11 @@ try {
     //  CONTENT
     // =================================================
     $mail->isHTML(true);                                        // Set email format to HTML
-    $mail->Subject = "New Website Inquiry from $name";
+    $mail->Subject = "New $type from $name";
 
     // HTML Body
     $mail->Body = "
-        <h3>New Contact Form Inquiry</h3>
+        <h3>New Contact Form Inquiry ($type)</h3>
         <p><strong>Name:</strong> $name</p>
         <p><strong>Email:</strong> $email</p>
         <p><strong>Phone:</strong> $phone</p>
@@ -81,7 +82,7 @@ try {
     ";
 
     // Plain Text Body
-    $mail->AltBody = "Name: $name\nEmail: $email\nPhone: $phone\nMessage: $message";
+    $mail->AltBody = "Type: $type\nName: $name\nEmail: $email\nPhone: $phone\nMessage: $message";
 
     $mail->send();
     echo json_encode(['status' => 'success', 'message' => 'Message has been sent']);
