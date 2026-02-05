@@ -82,14 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 6. Form Submission Listeners
-    const sendBtn = document.getElementById('sendBtn');
-    if (sendBtn) {
-        sendBtn.addEventListener('click', (e) => handleFormSubmit(e, 'sendBtn', null, true));
-    }
-
     const modalSendBtn = document.getElementById('modalSendBtn');
     if (modalSendBtn) {
-        modalSendBtn.addEventListener('click', (e) => handleFormSubmit(e, 'modalSendBtn', null, false));
+        modalSendBtn.addEventListener('click', (e) => handleFormSubmit(e, 'modalSendBtn', null));
     }
 
     const contactForm = document.getElementById('contactForm');
@@ -113,7 +108,7 @@ function toggleKeywords() {
 // ==========================================
 
 // Shared submit logic for modal and offcanvas
-function handleFormSubmit(e, btnId, formId, isOffcanvas = false) {
+function handleFormSubmit(e, btnId, formId) {
     e.preventDefault();
     const btn = document.getElementById(btnId);
     if (!btn) return;
@@ -121,21 +116,13 @@ function handleFormSubmit(e, btnId, formId, isOffcanvas = false) {
 
     let name, phone, email, message, type;
 
-    if (isOffcanvas) {
-        name = document.getElementById('tele-name').value.trim();
-        phone = document.getElementById('tele-phone').value.trim();
-        email = document.getElementById('tele-email').value.trim();
-        message = document.getElementById('message').value.trim();
-        const typeInput = document.querySelector('input[name="inquiry_type"]:checked');
-        type = typeInput ? typeInput.value : 'General Inquiry';
-    } else {
-        name = document.getElementById('modal-name').value.trim();
-        phone = document.getElementById('modal-phone').value.trim();
-        email = document.getElementById('modal-email').value.trim();
-        message = document.getElementById('modal-message').value.trim();
-        const typeInput = document.querySelector('#enquiryModal input[name="inquiry_type"]:checked');
-        type = typeInput ? typeInput.value : 'Franchise Inquiry';
-    }
+    // Use modal IDs exclusively for unified experience
+    name = document.getElementById('modal-name')?.value.trim();
+    phone = document.getElementById('modal-phone')?.value.trim();
+    email = document.getElementById('modal-email')?.value.trim();
+    message = document.getElementById('modal-message')?.value.trim();
+    const typeInput = document.querySelector('#enquiryModal input[name="inquiry_type"]:checked');
+    type = typeInput ? typeInput.value : 'General Inquiry';
 
     if (!name || !phone || !email || !message) {
         alert('Please fill all required fields.');
@@ -160,23 +147,13 @@ function handleFormSubmit(e, btnId, formId, isOffcanvas = false) {
         .then(data => {
             if (data.status === 'success') {
                 alert('Thank you! Your message has been sent successfully.');
-                if (isOffcanvas) {
-                    ['tele-name', 'tele-phone', 'tele-email', 'message'].forEach(id => {
-                        const el = document.getElementById(id);
-                        if (el) el.value = '';
-                    });
-                    const offcanvasEl = document.getElementById('contactOffcanvas');
-                    const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
-                    if (offcanvas) offcanvas.hide();
-                } else {
-                    ['modal-name', 'modal-phone', 'modal-email', 'modal-message'].forEach(id => {
-                        const el = document.getElementById(id);
-                        if (el) el.value = '';
-                    });
-                    const modalEl = document.getElementById('enquiryModal');
-                    const modal = bootstrap.Modal.getInstance(modalEl);
-                    if (modal) modal.hide();
-                }
+                ['modal-name', 'modal-phone', 'modal-email', 'modal-message'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.value = '';
+                });
+                const modalEl = document.getElementById('enquiryModal');
+                const modal = bootstrap.Modal.getInstance(modalEl);
+                if (modal) modal.hide();
             } else {
                 alert('Error: ' + data.message);
             }
