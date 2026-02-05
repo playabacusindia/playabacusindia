@@ -857,6 +857,15 @@ img {
     letter-spacing: 1px;
     display: inline-flex;
     align-items: center;
+    border: 2px solid var(--primary-clr);
+    color: var(--primary-clr);
+    transition: all 0.3s ease;
+}
+
+.hero-content .theme-btn.btn-outline-primary:hover {
+    background-color: var(--primary-clr) !important;
+    color: var(--white-clr) !important;
+    transform: translateY(-3px);
 }
 
 /* Ensure visibility on larger screens */
@@ -889,18 +898,16 @@ img {
 /* 10. Info Section */
 /* Info Section */
 #info-new-sec {
-    transform: translateY(-50%);
+    transform: translateY(-20%);
     z-index: 99;
     position: relative;
-    margin-bottom: -60px;
+    margin-bottom: 20px;
 }
 
 #info-new-sec> :nth-child(1) {
-    background: var(--white-clr);
     box-shadow: var(--shadow-premium);
     border-radius: var(--radius-lg);
     padding: 40px 20px;
-    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .info-box-new {
