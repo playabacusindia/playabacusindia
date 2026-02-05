@@ -357,11 +357,13 @@ img {
 
 /* 7. Top Bar */
 #top-bar {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+    /* Increased from 0.85rem */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background-color: var(--black-clr);
     color: var(--white-clr);
-    padding: 8px 0;
+    padding: 12px 0;
+    /* Increased from 8px 0 */
 }
 
 #top-bar a:hover {
@@ -388,7 +390,13 @@ img {
 }
 
 #top-bar .social-icon i {
-    font-size: 1rem;
+    font-size: 1.15rem;
+    /* Increased from 1rem */
+}
+
+/* Ensure .small links inside top-bar are also legible */
+#top-bar .small {
+    font-size: 0.9rem !important;
 }
 
 /* 8. Header / Navbar */
