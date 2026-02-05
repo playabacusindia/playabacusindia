@@ -7,24 +7,25 @@ Check out the live site here: [https://playabacusindia.github.io/playabacusindia
 
 ## ✨ Key Features
 
-### 💎 Premium UI/UX
+### 💎 Premium UI/UX Overhaul
+- **Unified Enquiry Modal**: Optimized "Enquire Now" experience across all devices. Mobile users now benefit from the same high-end modal as desktop users, replacing the previous offcanvas form.
 - **Modern Navigation**: Sleek, responsive navbar with "Soft Pill" interactions and a production-ready offcanvas mobile menu.
-- **Glassmorphism Hero**: High-end hero section featuring blurred floating badges and animated transitions.
-- **Smart Courses Section**: Dynamic course slider with optimized background imagery and focused readability.
-- **Production Footer**: Clean, left-aligned footer layout with minimal social branding and structured information.
+- **Top Bar Precision**: Enhanced top bar with precise scaling and improved clarity for contact information.
+- **Glassmorphism Hero**: High-end hero sections featuring blurred floating badges and animated transitions.
 
-### 📱 Responsive Design
-- Mobile-first approach using **Bootstrap 5.3**.
-- Optimized touch targets for mobile navigation.
-- Smooth transitions and animations (Cubic-bezier based).
+### 📱 Responsive & Production Ready
+- **Bootstrap 5.3 Core**: Mobile-first architecture ensures consistent performance on smartphones, tablets, and desktops.
+- **Site-wide Consistency**: Global header/footer synchronization across **83 HTML files** ensuring 100% brand alignment.
+- **Touch-First Interactions**: Optimized tap targets and smooth, physics-based animations.
 
 ### 🛠️ Technical Excellence
-- **SEO Optimized**: Semantic HTML5 header structure and updated meta tags.
-- **Structured Data**: JSON-LD schema implementation for improved search visibility.
-- **Performance**: Optimized asset loading (WebP support) and minimal external dependencies.
+- **Backend Integration**: Secure email handling via **PHPMailer** and `mail.php` for production-ready lead capture.
+- **SEO Mastery**: Deep semantic HTML5 structure, optimized meta descriptions, and JSON-LD schema implementation.
+- **Performance**: High-efficiency asset loading with WebP support and minimal external footprint.
 
 ## 🛠️ Technology Stack
 - **Structure**: HTML5, Bootstrap 5.3
+- **Backend**: PHP (PHPMailer)
 - **Styling**: Vanilla CSS (Modern CSS variables, Flexbox/Grid)
 - **Interactions**: JavaScript (ES6+), Swiper.js, Bootstrap Bundle
 - **Icons**: Bootstrap Icons, Font Awesome 6
@@ -38,13 +39,14 @@ Check out the live site here: [https://playabacusindia.github.io/playabacusindia
 │   ├── home/          # Course and brand specific imagery
 │   └── socialicons/   # Minimal SVG social branding
 ├── js/
-│   ├── script.js      # Custom interactions and logic
+│   ├── script.js      # Unified form logic and interactions
 │   └── swiper.js      # Slider configurations
+├── mail.php           # Secure backend form processing
 └── index.html         # Main entry point and structured content
 ```
 
 ## 🚀 Deployment
-This project is optimized for deployment via **GitHub Pages**. Ensure all image filenames remain case-sensitive for consistent remote loading.
+This project is optimized for deployment via **GitHub Pages** (Frontend) and **cPanel/PHP Hosting** (Backend Mailer). 
 
 ---
 *© 2026 Ideal Play Abacus India Pvt. Ltd. All rights reserved.*
