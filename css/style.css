@@ -59,6 +59,9 @@
     --shadow-card: 0 10px 20px rgba(0, 0, 0, 0.05);
     --radius-md: 16px;
     --radius-lg: 24px;
+
+    /* Waves */
+    --wave-color: hsl(113, 100%, 86%);
 }
 
 /* 2. Universal Styles */
@@ -431,7 +434,7 @@ img {
     --bs-border-radius-pill: 50rem;
     border-radius: var(--bs-border-radius-pill) !important;
     letter-spacing: 0.5px;
-    /* Reduced from 1px to make it less ëwideí */
+    /* Reduced from 1px to make it less wide */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -946,8 +949,6 @@ img {
     color: #64748b;
 }
 
-/* Responsive adjustments */
-/* 24. Responsive Media Queries */
 /* Responsive adjustments */
 /* 24. Responsive Media Queries */
 @media (max-width: 1200px) {
@@ -2000,9 +2001,6 @@ footer {
 
 /* 21. Wave Animation */
 /* wave */
-:root {
-    --wave-color: hsl(113, 100%, 86%);
-}
 
 @keyframes wave {
     0% {
