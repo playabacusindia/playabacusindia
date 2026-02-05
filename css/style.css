@@ -415,6 +415,10 @@ img {
     /* Shrink slightly on scroll */
 }
 
+.navbar-brand {
+    margin-left: -15px !important;
+}
+
 .navbar-brand img {
     transition: all 0.3s ease;
 }
