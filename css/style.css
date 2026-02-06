@@ -431,10 +431,8 @@ img {
 .nav-link {
     color: var(--primary-light) !important;
     font-weight: 600;
-    font-size: 0.9rem;
-    /* Reduced from 0.95rem */
-    padding: 8px 18px !important;
-    /* Reduced from 10px 24px */
+    font-size: 0.95rem;
+    padding: 10px 24px !important;
     /* Increased padding to match Enquire button (px-4) */
     position: relative;
     display: flex;
@@ -2581,11 +2579,6 @@ footer {
 @media (min-width: 1200px) and (max-width: 1400px) {
     .navbar-nav {
         gap: 10px !important;
-    }
-
-    .nav-link {
-        padding: 8px 12px !important;
-        font-size: 0.85rem !important;
     }
 
     .navbar-brand {
