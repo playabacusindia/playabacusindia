@@ -497,7 +497,7 @@ img {
     background: transparent;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .dropdown-menu {
         display: block;
         opacity: 0;
@@ -879,7 +879,7 @@ img {
 }
 
 /* Ensure visibility on larger screens */
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .hero-content {
         padding-right: 2rem;
         display: block !important;
@@ -2387,7 +2387,7 @@ footer {
     .offcanvas .nav-link {
         color: rgba(255, 255, 255, 0.9) !important;
         font-size: 1.15rem;
-        padding: 2px 0;
+        padding: 10px 0;
         border-bottom: none;
         transition: all 0.3s ease;
         display: flex;
@@ -2418,8 +2418,18 @@ footer {
     .offcanvas .dropdown-menu {
         background: rgba(255, 255, 255, 0.05);
         border: none;
-        margin-top: 0;
+        margin-top: 0 !important;
         padding: 0;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        position: static !important;
+        display: none;
+        transition: none !important;
+    }
+
+    .offcanvas .dropdown-menu.show {
+        display: block;
     }
 
     .offcanvas .dropdown-item {
