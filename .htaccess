@@ -2,13 +2,10 @@
   RewriteEngine On
   RewriteBase /
   
-  # Force HTTPS
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-
-  # Force WWW (Canonicalization)
+  # Force HTTPS + WWW (single redirect)
+  RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} !^www\. [NC]
-  RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+  RewriteRule ^ https://www.playabacusindia.com%{REQUEST_URI} [R=301,L]
 
   DirectoryIndex index.html
   
