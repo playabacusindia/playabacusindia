@@ -2534,6 +2534,70 @@ footer {
     #bottom-operator {
         z-index: 999 !important;
     }
+
+    /* Small Mobile Fixes (320px) */
+    @media (max-width: 350px) {
+        .offcanvas-body {
+            padding: 15px 12px !important;
+        }
+
+        .offcanvas .nav-link {
+            font-size: 1rem !important;
+            padding: 4px 10px !important;
+        }
+
+        .offcanvas .brand-logo-small {
+            height: 35px;
+        }
+
+        #top-bar .gap-3 {
+            gap: 10px !important;
+        }
+
+        .hero-title {
+            font-size: 1.8rem !important;
+        }
+
+        .announcement-box h2 {
+            font-size: 1.25rem !important;
+        }
+
+        .info-box-new {
+            padding: 15px 10px !important;
+            gap: 8px !important;
+        }
+
+        .info-box-content h3 {
+            font-size: 1.1rem !important;
+        }
+
+        .info-box-content p {
+            font-size: 0.75rem !important;
+        }
+    }
+}
+
+/* 1200-1400px Laptop Responsiveness */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .navbar-nav {
+        gap: 10px !important;
+    }
+
+    .nav-link {
+        padding: 8px 12px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .navbar-brand {
+        margin-right: 1rem !important;
+    }
+}
+
+.icon-box-sm {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
