@@ -193,6 +193,7 @@ function handleMainContactSubmit(e) {
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('message', message);
+    formData.append('type', 'Contact Inquiry');
 
     fetch('mail.php', {
         method: 'POST',

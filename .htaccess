@@ -16,11 +16,40 @@
 # Prevent directory listing
 Options -Indexes
 
-# Block access to any PHP files (optional but recommended for security)
+# Handle PHP access (Allow mail and diagnostic scripts)
 <FilesMatch "\.php$">
-  Order allow,deny
-  Deny from all
+  <IfModule mod_authz_core.c>
+    # Apache 2.4
+    <If "%{REQUEST_URI} =~ m#/(mail|mail_debug|smtp_diag)\.php$#">
+      Require all granted
+    </If>
+    <Else>
+      Require all denied
+    </Else>
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    # Apache 2.2
+    Order allow,deny
+    Deny from all
+  </IfModule>
 </FilesMatch>
+
+# Fallback for older servers if previous rules fail
+<Files "mail.php">
+  Order allow,deny
+  Allow from all
+  Satisfy any
+</Files>
+<Files "mail_debug.php">
+  Order allow,deny
+  Allow from all
+  Satisfy any
+</Files>
+<Files "smtp_diag.php">
+  Order allow,deny
+  Allow from all
+  Satisfy any
+</Files>
 
 # Enable Gzip Compression (mod_deflate)
 <IfModule mod_deflate.c>

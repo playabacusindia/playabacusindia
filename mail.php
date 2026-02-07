@@ -55,8 +55,8 @@ try {
     $mail->SMTPAuth = true;                                   // Enable SMTP authentication
     $mail->Username = 'contact@playabacusindia.com';          // SMTP username
     $mail->Password = 'PlayAbacusIndia@IPA.123';             // SMTP password (UPDATE THIS!)
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            // Enable implicit TLS encryption
-    $mail->Port = 465;                                    // TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption
+    $mail->Port = 587;                                          // TCP port to connect to
 
     // =================================================
     //  RECIPIENTS
