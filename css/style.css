@@ -576,6 +576,156 @@ img {
     padding-top: 20px;
 }
 
+/* Franchise Page Enhancements */
+.hero-graphic-container {
+    position: relative;
+    padding: 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-main-img-branded {
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-premium);
+    z-index: 2;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.hero-main-img-branded:hover {
+    transform: scale(1.02) rotate(1deg);
+}
+
+.floating-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--white-clr);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    animation: floatIcon 4s ease-in-out infinite;
+}
+
+.icon-1 {
+    top: 10%;
+    left: 0%;
+    animation-delay: 0s;
+}
+
+.icon-2 {
+    bottom: 20%;
+    right: 5%;
+    animation-delay: 1s;
+}
+
+.icon-3 {
+    top: 40%;
+    right: -5%;
+    animation-delay: 2s;
+}
+
+.floating-icon i {
+    font-size: 1.5rem;
+    color: var(--secondary-clr);
+}
+
+@keyframes floatIcon {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+.growth-chart-container {
+    padding: 30px;
+    background: var(--white-clr);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-premium);
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.growth-line {
+    fill: none;
+    stroke: var(--secondary-clr);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: growLine 3s ease-out forwards;
+}
+
+@keyframes growLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.growth-point {
+    fill: var(--accent-clr);
+    opacity: 0;
+    animation: fadeInPoint 0.5s ease-out forwards;
+}
+
+@keyframes fadeInPoint {
+    from {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: center;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: center;
+    }
+}
+
+.point-1 {
+    animation-delay: 0.5s;
+}
+
+.point-2 {
+    animation-delay: 1.2s;
+}
+
+.point-3 {
+    animation-delay: 1.8s;
+}
+
+.point-4 {
+    animation-delay: 2.5s;
+}
+
+.i-and-r-box {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.i-and-r-box:hover {
+    transform: scale(1.05);
+    background: #f0fdf4 !important;
+    border-color: var(--secondary-clr);
+}
+
 .hero-shape {
     position: absolute;
     border-radius: 50%;
