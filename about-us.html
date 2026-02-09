@@ -328,38 +328,78 @@
 
     <main style="overflow:hidden" class="w-100">
         <!-- banner -->
+        <!-- banner -->
         <section id="banner" class="container-fluid pt-0 pt-md-0">
             <div class="row">
                 <div class="col-12 p-0">
-                    <div id="banner-slide" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
-                            <div class="carousel-item h-100 active position-relative">
-                                <img src="https://www.playabacusindia.com/images/banner/6.webp" class="d-block w-100"
-                                    alt="Abacus class and Franchises">
-                                <div
-                                    class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-                                    <div class="text-center text-white p-3 p-md-4 p-lg-5 banner-content-box">
-                                        <h1 class="display-3 fw-bold">About Us</h1>
-                                        <p>Discover interactive abacus classes in India designed to
-                                            improve your childs mental math, memory, and confidence. Join us to explore
-                                            the power of abacus maths and abacus
-                                            mastermind learning.</p>
-                                        <nav aria-label="breadcrumb" class="breadcrumb-box">
-                                            <ol class="breadcrumb">
-                                                <li class="breadcrumb-item"><a
-                                                        href="https://www.playabacusindia.com/">Home</a></li>
-                                                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                    <!-- Modern Hero Section -->
+                    <div class="hero-section d-flex align-items-center position-relative overflow-hidden">
+                        <!-- Background Shapes -->
+                        <div class="hero-shape shape-1"></div>
+                        <div class="hero-shape shape-2"></div>
+
+                        <div class="container py-4">
+                            <div class="row align-items-center gy-5">
+                                <!-- Text Content -->
+                                <div class="col-lg-6 order-2 order-lg-1">
+                                    <div class="hero-content pe-lg-5 text-center text-lg-start">
+                                        <div class="badge-pill mb-3 fade-in-up delay-1">
+                                            <i class="fa-solid fa-star text-warning me-2"></i> 23 Years of Excellence
+                                        </div>
+                                        <h1
+                                            class="display-5 display-lg-4 fw-bold mb-4 text-dark hero-title fade-in-up delay-2">
+                                            About <span class="text-gradient">Ideal Play Abacus</span>
+                                        </h1>
+
+                                        <!-- Breadcrumb -->
+                                        <nav aria-label="breadcrumb"
+                                            class="fade-in-up delay-2 mb-4 d-flex justify-content-center justify-content-lg-start">
+                                            <ol
+                                                class="breadcrumb mb-0 p-2 rounded-pill bg-light shadow-sm d-inline-flex">
+                                                <li class="breadcrumb-item"><a href="index.html"
+                                                        class="text-decoration-none text-muted"><i
+                                                            class="fa-solid fa-house me-1"></i> Home</a></li>
+                                                <li class="breadcrumb-item active text-primary fw-bold"
+                                                    aria-current="page">About Us</li>
                                             </ol>
                                         </nav>
+
+                                        <p class="lead text-secondary mb-5 hero-text fade-in-up delay-3">
+                                            Discover interactive abacus classes in India designed to improve your
+                                            child's mental math, memory, and confidence. Join us to explore the power of
+                                            abacus maths and abacus mastermind learning.
+                                        </p>
+                                        <div
+                                            class="d-flex justify-content-center justify-content-lg-start gap-3 fade-in-up delay-4">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#enquiryModal"
+                                                class="theme-btn-2 text-decoration-none">
+                                                <span>Enquire Now <i class="fa-solid fa-arrow-right ms-2"></i></span>
+                                            </a>
+                                            <!-- <a href="#about-us" class="theme-btn btn-outline-primary hover-lift">
+                                                <i class="fa-solid fa-play me-2"></i> Watch Video
+                                            </a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Image Content -->
+                                <div class="col-lg-6 order-1 order-lg-2">
+                                    <div class="hero-image-wrapper position-relative text-center slide-in-right">
+                                        <!-- Main Image -->
+                                        <div class="hero-img-container">
+                                            <img src="https://www.playabacusindia.com/images/banner/6.webp"
+                                                alt="About Ideal Play Abacus India"
+                                                class="img-fluid rounded-4 shadow-premium hero-main-img"
+                                                fetchpriority="high" width="600" height="400">
+                                        </div>
+
 
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
         </section>
 
         <!-- info section -->
@@ -452,7 +492,7 @@
                 <div class="row mt-5 bg-primary-clr p-3 p-md-4 p-lg-5">
                     <div class="col-12">
                         <div class="d-flex justify-content-center align-items-start flex-column w-100">
-                            <h4 class="mb-4">ISO 9001: 2015 Certified.</h4>
+                            <h4 class="mb-4 text-black">ISO 9001: 2015 Certified.</h4>
                             <ul class="d-flex gap-3 flex-column">
                                 <li>One of the primary institutions founded by an all-women entrepreneur team in 2003,
                                     Ideal Play Abacus India Private Limited (IPA) has grown into a
@@ -480,7 +520,7 @@
                                 src="https://www.playabacusindia.com/images/about-us/mrs-shaarada.jpeg"
                                 alt="Mrs. Shaarada K.Sriram">
                             <h3 class="txt-secondary-clr">Mrs. Shaarada K.Sriram</h3>
-                            <h6>MANAGING DIRECTOR</h6>
+                            <h6 class="text-black">MANAGING DIRECTOR</h6>
                         </div>
                     </div>
                     <div class="col-12 col-md-12 col-lg-6">
@@ -680,15 +720,20 @@
             </div>
         </section>
         <!-- cta -->
-        <section id="cta" class="container-fluid py-5">
-            <div
-                class="banner-content-box overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-                <div class="text-center text-white p-3">
-                    <h2 class="display-3 fw-bold">Start Abacus Learning in India Today</h2>
-                    <p>Enroll your child in our abacus programs or start abacus franchise in India today. Partner with
-                        Indias leading abacus training provider and make a difference in childrens education.</p>
-                    <button onclick="msgBox()" id="chat-box" role="button" class="theme-btn mt-3">Get In Touch <i
-                            class="fa-solid fa-pen-clip"></i></button>
+        <section id="cta" class="container-fluid py-5 d-flex align-items-center justify-content-center">
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="cta-glass-box text-center p-4 p-md-5">
+                    <h2 class="display-4 fw-bold mb-4">Start Abacus Learning in India Today</h2>
+                    <p class="lead mb-4">Enroll your child in our abacus programs or start abacus franchise in India
+                        today. Partner with Indias leading abacus training provider and make a difference in childrens
+                        education.</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="contact-us.html"
+                            class="theme-btn-cta mt-2 text-decoration-none d-inline-flex align-items-center">
+                            <span>Get In Touch</span>
+                            <i class="bi bi-chat-right-text-fill ms-2"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

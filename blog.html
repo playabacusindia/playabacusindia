@@ -367,34 +367,40 @@
     </header>
     <main style="overflow:hidden" class="w-100">
         <!-- banner -->
-        <section id="banner" class="container-fluid pt-0 pt-md-0">
-            <div class="row">
-                <div class="col-12 p-0">
-                    <div id="banner-slide" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
-                            <div class="carousel-item h-100 active position-relative">
-                                <img src="https://www.playabacusindia.com/images/banner/6.webp" class="d-block w-100"
-                                    alt="Abacus class and Franchises">
-                                <div
-                                    class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-                                    <div class="text-center text-white p-3 p-md-4 p-lg-5 banner-content-box">
-                                        <h1 class="display-3 fw-bold">Abacus Learning Blog</h1>
-                                        <p>Learn how abacus learning enhances brain development, mental arithmetic, and
-                                            cognitive skills with Ideal Play Abacus India.</p>
-                                        <nav aria-label="breadcrumb" class="breadcrumb-box">
-                                            <ol class="breadcrumb">
-                                                <li class="breadcrumb-item"><a
-                                                        href="https://www.playabacusindia.com/">Home</a></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
-                                            </ol>
-                                        </nav>
-
-                                    </div>
-                                </div>
-                            </div>
+        <!-- banner -->
+        <section class="position-relative py-5 overflow-hidden hero-section">
+            <div class="container position-relative z-1">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <nav aria-label="breadcrumb" class="mb-4">
+                            <ol class="breadcrumb bg-transparent p-0 mb-0">
+                                <li class="breadcrumb-item"><a href="index.html"
+                                        class="text-decoration-none text-muted">Home</a></li>
+                                <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">Blog</li>
+                            </ol>
+                        </nav>
+                        <h1 class="display-3 fw-bold mb-4 text-dark hero-title">
+                            Our <span class="text-gradient">Blog</span>
+                        </h1>
+                        <p class="lead text-secondary mb-5 hero-text">
+                            Learn how abacus learning enhances brain development, mental arithmetic, and
+                            cognitive skills with Ideal Play Abacus India.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#enquiryModal"
+                                class="theme-btn-2 text-decoration-none">
+                                <span>Enquire Now <i class="fa-solid fa-arrow-right ms-2"></i></span>
+                            </a>
                         </div>
                     </div>
+                    <div class="col-lg-6 position-relative d-none d-lg-block">
+                        <div class="hero-image-wrapper p-4 pe-0 position-relative">
+                            <img src="https://www.playabacusindia.com/images/banner/6.webp"
+                                class="img-fluid rounded-4 shadow-lg position-relative z-2" alt="Abacus Blog">
+                            <!-- Floating Elements -->
 
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -860,15 +866,25 @@
             </div>
         </section>
         <!-- cta -->
-        <section id="cta" class="container-fluid py-5">
-            <div
-                class="banner-content-box overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-                <div class="text-center text-white p-3">
-                    <h2 class="display-3 fw-bold">Start Abacus Learning in India Today</h2>
-                    <p>Enroll your child or become a partner with Indias leading abacus training
-                        provider.</p>
-                    <button onclick="msgBox()" id="chat-box" role="button" class="theme-btn mt-3">Get In Touch <i
-                            class="fa-solid fa-pen-clip"></i></button>
+        <!-- cta -->
+        <section id="cta" class="container py-5">
+            <div class="cta-glass-box text-center p-5 rounded-4 position-relative overflow-hidden">
+                <div class="position-relative z-2">
+                    <h2 class="display-4 fw-bold text-white mb-4">Start Abacus Learning in <span
+                            class="text-warning">India Today</span></h2>
+                    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 700px;">
+                        Enroll your child or become a partner with India's leading abacus training provider.
+                    </p>
+                    <button onclick="msgBox()" id="chat-box" role="button" class="theme-btn-2">
+                        <span>Get In Touch <i class="fa-solid fa-arrow-right ms-2"></i></span>
+                    </button>
+                </div>
+                <!-- Decorative Elements -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 z-1">
+                    <div class="position-absolute top-0 end-0 bg-primary opacity-25 rounded-circle"
+                        style="width: 300px; height: 300px; filter: blur(80px); transform: translate(30%, -30%);"></div>
+                    <div class="position-absolute bottom-0 start-0 bg-secondary opacity-25 rounded-circle"
+                        style="width: 300px; height: 300px; filter: blur(80px); transform: translate(-30%, 30%);"></div>
                 </div>
             </div>
         </section>
