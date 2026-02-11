@@ -107,6 +107,48 @@ function toggleKeywords() {
 // Form Submission Handlers
 // ==========================================
 
+// ==========================================
+// Toast Notifications Logic
+// ==========================================
+
+function showToast(title, message, type = 'success') {
+    // Check if toast container exists, if not create it
+    let container = document.querySelector('.toast-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'toast-container position-fixed top-0 start-50 translate-middle-x p-3';
+        document.body.appendChild(container);
+    }
+
+    const toastId = 'toast-' + Date.now();
+    const icon = type === 'success' ? 'bi-check-circle-fill' : 'bi-exclamation-circle-fill';
+
+    const toastHTML = `
+        <div id="${toastId}" class="toast premium-toast ${type} align-items-center border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex p-3">
+                <div class="toast-icon-wrapper">
+                    <i class="bi ${icon} fs-4"></i>
+                </div>
+                <div class="toast-content ms-3 flex-grow-1">
+                    <h6 class="m-0">${title}</h6>
+                    <p class="m-0">${message}</p>
+                </div>
+                <button type="button" class="btn-close ms-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    `;
+
+    container.insertAdjacentHTML('beforeend', toastHTML);
+    const toastEl = document.getElementById(toastId);
+    const toast = new bootstrap.Toast(toastEl, { autohide: true, delay: 5000 });
+    toast.show();
+
+    // Clean up DOM after toast is hidden
+    toastEl.addEventListener('hidden.bs.toast', () => {
+        toastEl.remove();
+    });
+}
+
 // Shared submit logic for modal and offcanvas
 function handleFormSubmit(e, btnId, formId) {
     e.preventDefault();
@@ -125,7 +167,7 @@ function handleFormSubmit(e, btnId, formId) {
     type = typeInput ? typeInput.value : 'General Inquiry';
 
     if (!name || !phone || !email || !message) {
-        alert('Please fill all required fields.');
+        showToast('Required Fields', 'Please fill all required fields before sending.', 'error');
         return;
     }
 
@@ -146,7 +188,7 @@ function handleFormSubmit(e, btnId, formId) {
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {
-                alert('Thank you! Your message has been sent successfully.');
+                showToast('Success!', 'Your enquiry has been sent. We will contact you shortly.', 'success');
                 ['modal-name', 'modal-phone', 'modal-email', 'modal-message'].forEach(id => {
                     const el = document.getElementById(id);
                     if (el) el.value = '';
@@ -155,12 +197,12 @@ function handleFormSubmit(e, btnId, formId) {
                 const modal = bootstrap.Modal.getInstance(modalEl);
                 if (modal) modal.hide();
             } else {
-                alert('Error: ' + data.message);
+                showToast('Failed to Send', data.message || 'There was an error sending your message.', 'error');
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Something went wrong. Please try again later.');
+            showToast('System Error', 'Something went wrong. Please check your connection and try again.', 'error');
         })
         .finally(() => {
             btn.innerHTML = originalText;
@@ -181,7 +223,7 @@ function handleMainContactSubmit(e) {
     const message = document.getElementById('message').value.trim();
 
     if (!name || !email || !phone || !message) {
-        alert('Please fill all fields.');
+        showToast('Missing Fields', 'Please complete all fields in the contact form.', 'error');
         return;
     }
 
@@ -202,15 +244,15 @@ function handleMainContactSubmit(e) {
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {
-                alert('Thank you! Your message has been sent successfully.');
+                showToast('Message Sent', 'Thank you for reaching out! We will get back to you soon.', 'success');
                 contactForm.reset();
             } else {
-                alert('Error: ' + data.message);
+                showToast('Error', data.message || 'Could not send your message at this time.', 'error');
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Something went wrong. Please check your internet connection or try again later.');
+            showToast('Connection Error', 'Please check your internet connection or try again later.', 'error');
         })
         .finally(() => {
             btn.innerHTML = originalText;
