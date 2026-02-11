@@ -19,8 +19,8 @@ const swiper = new Swiper(".courses-slide", {
       spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 4,
-      spaceBetween: 100,
+      slidesPerView: 3,
+      spaceBetween: 50,
     },
   }
 });

@@ -254,7 +254,8 @@ img {
 }
 
 .icon-list li i {
-    margin-top: 0.35rem; /* Optical alignment */
+    margin-top: 0.35rem;
+    /* Optical alignment */
     color: var(--secondary-clr);
     flex-shrink: 0;
 }
@@ -2845,7 +2846,7 @@ footer {
     overflow: hidden;
     position: relative;
     /* Abstract background with subtle overlay if needed */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), var(--course-img);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), var(--course-img);
     background-size: cover;
     background-position: center;
     min-height: 350px;
@@ -2861,14 +2862,16 @@ footer {
 .course-box:hover {
     transform: translateY(-5px);
     box-shadow: var(--hover-shadow);
+    border-color: var(--primary-clr);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), var(--course-img);
 }
 
 .course-logo {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
     background: white;
-    padding: 5px;
+    padding: 10px;
     border-radius: 12px;
     position: absolute;
     top: 20px;

@@ -121,7 +121,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -136,14 +136,14 @@
             src="https://www.facebook.com/tr?id=4105191913057058&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17517142887"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17517142887"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'AW-17517142887');
-</script>
+        gtag('config', 'AW-17517142887');
+    </script>
 
 </head>
 
@@ -227,14 +227,14 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-xl-center flex-grow-1 pe-3 gap-0 gap-xl-3 fw-semibold">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about-us.html">About Us</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
                                     Courses <i class="fa-solid fa-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu border-0 shadow-lg animate slideIn rounded-3 mt-2">
@@ -353,35 +353,64 @@
         </nav>
 
     </header>
-    <main style="overflow:hidden" class="w-100">
+    <main class="w-100 overflow-hidden-x">
         <!-- banner -->
         <section id="banner" class="container-fluid pt-0 pt-md-0">
             <div class="row">
                 <div class="col-12 p-0">
-                    <div id="banner-slide" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
-                            <div class="carousel-item h-100 active position-relative">
-                                <img src="images/banner/9.webp" class="d-block w-100" alt="Abacus class and Franchises">
-                                <div
-                                    class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-                                    <div class="text-center text-white p-3 p-md-4 p-lg-5 banner-content-box">
-                                        <h1 class="display-3 fw-bold">Best Abacus Classes online for a Brighter Future
+                    <!-- Modern Hero Section -->
+                    <div class="hero-section d-flex align-items-center position-relative overflow-hidden">
+                        <!-- Background Shapes -->
+                        <div class="hero-shape shape-1"></div>
+                        <div class="hero-shape shape-2"></div>
+                        <div class="hero-shape shape-3"></div>
+
+                        <div class="container py-4">
+                            <div class="row align-items-center gy-5">
+                                <!-- Text Content -->
+                                <div class="col-lg-6 order-2 order-lg-1">
+                                    <div class="hero-content position-relative">
+                                        <div
+                                            class="badge bg-light text-primary fw-bold px-3 py-2 rounded-pill mb-3 shadow-sm fade-in-up">
+                                            <i class="fa-solid fa-star me-2"></i>Abacus Training
+                                        </div>
+                                        <h1 class="display-4 fw-bold mb-4 text-dark fade-in-up delay-1">
+                                            Best <span class="text-gradient">Abacus Classes Online</span>
                                         </h1>
-                                        <p>Unlock your childs true potential with IPA Abacus  the best abacus classes
-                                            online designed to boost brain development and academic success.</p>
-                                        <nav aria-label="breadcrumb" class="breadcrumb-box">
-                                            <ol class="breadcrumb">
-                                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Abacus Class
-                                                    Online</li>
+                                        <p class="lead text-muted mb-4 fade-in-up delay-2">
+                                            Unlock your child's true potential with IPA Abacus, designed to boost brain
+                                            development and academic success.
+                                        </p>
+
+                                        <!-- Breadcrumb -->
+                                        <nav aria-label="breadcrumb"
+                                            class="fade-in-up delay-2 mb-4 d-flex justify-content-center justify-content-lg-start">
+                                            <ol class="breadcrumb bg-white shadow-sm px-4 py-2 rounded-pill">
+                                                <li class="breadcrumb-item"><a href="index.html"
+                                                        class="text-decoration-none text-muted"><i
+                                                            class="fa-solid fa-house me-1"></i> Home</a></li>
+                                                <li class="breadcrumb-item active text-primary fw-bold"
+                                                    aria-current="page">
+                                                    Abacus Classes Online</li>
                                             </ol>
                                         </nav>
+
+                                    </div>
+                                </div>
+
+                                <!-- Image Content -->
+                                <div class="col-lg-6 order-1 order-lg-2">
+                                    <div class="hero-image-wrapper position-relative fade-in-right">
+                                        <div
+                                            class="hero-image-bg position-absolute top-50 start-50 translate-middle bg-primary opacity-10 rounded-circle">
+                                        </div>
+                                        <img src="images/banner/9.webp" alt="Abacus Classes"
+                                            class="img-fluid position-relative hero-main-img floating-animation">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -401,7 +430,8 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3">
-                        <div class="d-flex justify-content-start justify-content-md-start justify-content-lg-center align-items-center w-100 info-box-new gap-3">
+                        <div
+                            class="d-flex justify-content-start justify-content-md-start justify-content-lg-center align-items-center w-100 info-box-new gap-3">
                             <div class="d-flex justify-content-center align-items-center info-box-icon">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
@@ -412,7 +442,8 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3">
-                        <div class="d-flex justify-content-start justify-content-md-start justify-content-lg-center align-items-center w-100 info-box-new gap-3">
+                        <div
+                            class="d-flex justify-content-start justify-content-md-start justify-content-lg-center align-items-center w-100 info-box-new gap-3">
                             <div class="d-flex justify-content-center align-items-center info-box-icon">
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
@@ -423,7 +454,8 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3">
-                        <div class="d-flex justify-content-start justify-content-md-start justify-content-lg-end align-items-center w-100 info-box-new gap-3">
+                        <div
+                            class="d-flex justify-content-start justify-content-md-start justify-content-lg-end align-items-center w-100 info-box-new gap-3">
                             <div class="d-flex justify-content-center align-items-center info-box-icon">
                                 <i class="fa-solid fa-gem"></i>
                             </div>
@@ -480,7 +512,7 @@
                             <p>With certified trainers and a standardized curriculum, each of our abacus learning
                                 centers ensures consistent quality and measurable outcomes.</p>
 
-                            <p>Join IPA  the most recommended Abacus teaching centre  and be part of a movement that
+                            <p>Join IPA the most recommended Abacus teaching centre and be part of a movement that
                                 transforms math anxiety into joyful learning.</p>
                         </div>
                     </div>
@@ -526,7 +558,7 @@
                 class="banner-content-box overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
                 <div class="text-center text-white p-3">
                     <h2 class="display-3 fw-bold">Enroll Your Child in IPA Abacus Today!</h2>
-                    <p>Give your child the competitive edge they deserve with IPA Abacus  Indias trusted name in
+                    <p>Give your child the competitive edge they deserve with IPA Abacus Indias trusted name in
                         abacus education. Whether you're looking for the best abacus classes online or a reputed abacus
                         training centre, we're here to guide your child every step of the way. Lets build confident
                         learners together.</p>
@@ -539,6 +571,7 @@
     <!-- footer -->
     <footer class="container-fluid pt-5 px-0">
         <div class="row g-4 gy-5">
+            <!-- Quick Links -->
             <div class="col-12 col-sm-6 col-lg-2">
                 <div class="d-flex align-items-start w-100 flex-column gap-3 footer-content-box">
                     <h4>Quick Links</h4>
@@ -555,6 +588,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Our Courses -->
             <div class="col-12 col-sm-6 col-lg-2">
                 <div class="d-flex align-items-start w-100 flex-column gap-3 footer-content-box">
                     <h4>Our Courses</h4>
@@ -574,6 +608,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Our Branches -->
             <div class="col-12 col-lg-4">
                 <div class="d-flex align-items-start w-100 flex-column gap-3 footer-content-box">
                     <h4>Our Branches</h4>
@@ -662,7 +697,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="d-flex justify-content-center align-items-center w-100 text-center">
-                            <p class="m-0">Â© <span id="year"></span> Ideal Play Abacus India Pvt. Ltd. All rights
+                            <p class="m-0">© <span id="year"></span> Ideal Play Abacus India Pvt. Ltd. All rights
                                 reserved.</p>
                         </div>
                     </div>
@@ -722,7 +757,8 @@
                         <div class="mb-3">
                             <div class="input-group">
                                 <span class="input-group-text bg-light border-end-0">
-                                    <img src="https://flagcdn.com/w20/in.png" alt="India" class="flag-icon-sm">
+                                    <img src="https://flagcdn.com/w20/in.png" alt="India" class="flag-icon-sm"
+                                        width="20" height="15" loading="lazy">
                                     <span class="ms-1 small">+91</span>
                                 </span>
                                 <input id="modal-phone" class="form-control border-start-0 ps-0"
@@ -746,13 +782,9 @@
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" title="Go to top">
-        <i class="bi bi-arrow-up"></i>
+        <i class="fa-solid fa-arrow-up"></i>
     </button>
 
 </body>
 
 </html>
-
-
-
-
