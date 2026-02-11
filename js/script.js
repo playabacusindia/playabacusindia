@@ -124,16 +124,16 @@ function showToast(title, message, type = 'success') {
     const icon = type === 'success' ? 'bi-check-circle-fill' : 'bi-exclamation-circle-fill';
 
     const toastHTML = `
-        <div id="${toastId}" class="toast premium-toast ${type} align-items-center border-0" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="d-flex p-3">
-                <div class="toast-icon-wrapper">
-                    <i class="bi ${icon} fs-4"></i>
+        <div id="${toastId}" class="toast premium-toast fade ${type}" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header border-0 pb-0">
+                <div class="toast-icon-wrapper-sm me-2">
+                    <i class="bi ${icon}"></i>
                 </div>
-                <div class="toast-content ms-3 flex-grow-1">
-                    <h6 class="m-0">${title}</h6>
-                    <p class="m-0">${message}</p>
-                </div>
-                <button type="button" class="btn-close ms-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <strong class="me-auto toast-title">${title}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body pt-1 pb-3">
+                ${message}
             </div>
         </div>
     `;
