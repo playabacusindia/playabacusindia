@@ -181,11 +181,28 @@ function handleFormSubmit(e, btnId, formId) {
     formData.append('message', message);
     formData.append('type', type);
 
-    fetch('mail.php', {
+    // Dynamic path to mail.php based on script location
+    const scriptTag = document.querySelector('script[src*="js/script.js"]');
+    let mailPath = 'mail.php';
+    if (scriptTag) {
+        const scriptSrc = scriptTag.getAttribute('src');
+        const basePath = scriptSrc.replace('js/script.js', '');
+        mailPath = basePath + 'mail.php';
+    }
+
+    fetch(mailPath, {
         method: 'POST',
         body: formData
     })
-        .then(response => response.json())
+        .then(async response => {
+            const text = await response.text();
+            try {
+                return JSON.parse(text);
+            } catch (e) {
+                console.error('Server response was not JSON:', text);
+                throw new Error('Invalid server response');
+            }
+        })
         .then(data => {
             if (data.status === 'success') {
                 showToast('Success!', 'Your enquiry has been sent. We will contact you shortly.', 'success');
@@ -237,11 +254,28 @@ function handleMainContactSubmit(e) {
     formData.append('message', message);
     formData.append('type', 'Contact Inquiry');
 
-    fetch('mail.php', {
+    // Dynamic path to mail.php based on script location
+    const scriptTag = document.querySelector('script[src*="js/script.js"]');
+    let mailPath = 'mail.php';
+    if (scriptTag) {
+        const scriptSrc = scriptTag.getAttribute('src');
+        const basePath = scriptSrc.replace('js/script.js', '');
+        mailPath = basePath + 'mail.php';
+    }
+
+    fetch(mailPath, {
         method: 'POST',
         body: formData
     })
-        .then(response => response.json())
+        .then(async response => {
+            const text = await response.text();
+            try {
+                return JSON.parse(text);
+            } catch (e) {
+                console.error('Server response was not JSON:', text);
+                throw new Error('Invalid server response');
+            }
+        })
         .then(data => {
             if (data.status === 'success') {
                 showToast('Message Sent', 'Thank you for reaching out! We will get back to you soon.', 'success');
