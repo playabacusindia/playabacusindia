@@ -82,6 +82,31 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
+    <!-- Preload Critical LCP Asset -->
+    <link rel="preload" as="image" href="../images/blog/blogone/tenFun.jpg" fetchpriority="high">
+
+    <!-- Critical CSS for Layout Stability (CLS) -->
+    <style>
+        #top-bar {
+            min-height: 40px;
+        }
+
+        #header {
+            min-height: 110px;
+        }
+
+        .navbar {
+            min-height: 70px;
+        }
+
+        .hero-image-wrapper {
+            aspect-ratio: 600 / 400;
+            background: #f8f9fa;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+    </style>
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,7 +174,7 @@
         <nav class="navbar navbar-expand-xl navbar-light bg-white sticky-top shadow-sm py-2">
             <div class="container">
                 <!-- Brand Logo -->
-                <a class="navbar-brand me-4" href="index.html">
+                <a class="navbar-brand me-4" href="https://www.playabacusindia.com/">
                     <img src="https://www.playabacusindia.com/images/logo.jpg"
                         alt="Ideal Play Abacus India - Best Abacus Training" class="logo-brand" width="150" height="50">
                 </a>
@@ -171,10 +196,11 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-xl-center flex-grow-1 pe-3 gap-0 gap-xl-3 fw-semibold">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link active" aria-current="page"
+                                    href="https://www.playabacusindia.com/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about-us.html">About Us</a>
+                                <a class="nav-link" href="https://www.playabacusindia.com/about-us.html">About Us</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -182,23 +208,32 @@
                                     Courses <i class="fa-solid fa-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu border-0 shadow-lg animate slideIn rounded-3 mt-2">
-                                    <li><a class="dropdown-item px-3 py-1" href="our-courses/abacus.html">Abacus</a>
+                                    <li><a class="dropdown-item px-3 py-1"
+                                            href="https://www.playabacusindia.com/our-courses/abacus.html">Abacus</a>
                                     </li>
                                     <li><a class="dropdown-item px-3 py-1"
-                                            href="our-courses/speed-arithmetic.html">Vedic Mathematics</a></li>
-                                    <li><a class="dropdown-item px-3 py-1" href="our-courses/arka-kids.html">Arka
+                                            href="https://www.playabacusindia.com/our-courses/speed-arithmetic.html">Vedic
+                                            Mathematics</a></li>
+                                    <li><a class="dropdown-item px-3 py-1"
+                                            href="https://www.playabacusindia.com/our-courses/arka-kids.html">Arka
                                             Kids</a></li>
                                     <li><a class="dropdown-item px-3 py-1"
-                                            href="our-courses/creative-arts-india.html">Creative Art India</a></li>
-                                    <li><a class="dropdown-item px-3 py-1" href="our-courses/phonics-star.html">Phonics
+                                            href="https://www.playabacusindia.com/our-courses/creative-arts-india.html">Creative
+                                            Art India</a></li>
+                                    <li><a class="dropdown-item px-3 py-1"
+                                            href="https://www.playabacusindia.com/our-courses/phonics-star.html">Phonics
                                             Star</a></li>
                                     <li><a class="dropdown-item px-3 py-1"
-                                            href="our-courses/handwriting.html">Handwriting</a></li>
-                                    <li><a class="dropdown-item px-3 py-1" href="our-courses/brite-english.html">Brite
+                                            href="https://www.playabacusindia.com/our-courses/handwriting.html">Handwriting</a>
+                                    </li>
+                                    <li><a class="dropdown-item px-3 py-1"
+                                            href="https://www.playabacusindia.com/our-courses/brite-english.html">Brite
                                             English</a></li>
-                                    <li><a class="dropdown-item px-3 py-1" href="our-courses/brain-tree.html">Brain
+                                    <li><a class="dropdown-item px-3 py-1"
+                                            href="https://www.playabacusindia.com/our-courses/brain-tree.html">Brain
                                             Tree</a></li>
-                                    <li><a class="dropdown-item px-3 py-1" href="our-courses/my-math.html">My Math</a>
+                                    <li><a class="dropdown-item px-3 py-1"
+                                            href="https://www.playabacusindia.com/our-courses/my-math.html">My Math</a>
                                     </li>
                                 </ul>
                             </li>
@@ -209,14 +244,16 @@
                                 </a>
                                 <ul class="dropdown-menu border-0 shadow-lg animate slideIn rounded-3 mt-2">
 
-                                    <li><a class="dropdown-item px-3 py-1" href="gallery.html">Gallery</a></li>
+                                    <li><a class="dropdown-item px-3 py-1"
+                                            href="https://www.playabacusindia.com/gallery.html">Gallery</a></li>
                                     <li><a class="dropdown-item px-3 py-1"
                                             href="https://www.playabacusindia.com/blog.html">Blog</a></li>
 
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact-us.html">Contact Us</a>
+                                <a class="nav-link" href="https://www.playabacusindia.com/contact-us.html">Contact
+                                    Us</a>
                             </li>
                         </ul>
 
@@ -338,8 +375,8 @@
                             <div class="hero-image-wrapper position-relative text-center">
                                 <img src="../images/blog/blogone/tenFun.jpg"
                                     alt="10 Fun and Creative Art Activities for Kids at Home"
-                                    class="img-fluid rounded-4 shadow-premium" style="width: 100%; object-fit: cover;"
-                                    fetchpriority="high">
+                                    class="img-fluid rounded-4 shadow-premium" width="600" height="400"
+                                    style="width: 100%; height: auto; object-fit: cover;" fetchpriority="high">
                             </div>
                         </div>
                     </div>
@@ -694,9 +731,11 @@
                         <div
                             class="d-flex justify-content-center align-items-center w-100 text-center gap-2 gap-md-2 gap-lg-3 flex-wrap">
                             OUR OTHER WEBSITES -
-                            <a href="https://creativeartsindia.in/">Creative Arts India: creativeartsindia.in</a>
+                            <a href="https://creativeartsindia.in/" target="_blank" rel="noopener noreferrer">Creative
+                                Arts India: creativeartsindia.in</a>
                             <span>|</span>
-                            <a href="https://www.arkakids.com/">Arka Kids : arkakids.com</a>
+                            <a href="https://www.arkakids.com/" target="_blank" rel="noopener noreferrer">Arka Kids :
+                                arkakids.com</a>
                         </div>
                     </div>
                 </div>
