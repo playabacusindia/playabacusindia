@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Imports a nice cursive handwriting font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap');
+
+    .draw-text {
+      font-family: 'Pacifico', cursive;
+      font-size: 100px;
+      /* These numbers control the drawing effect length */
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      /* 4s is the speed, infinite makes it loop */
+      animation: drawText 4s ease-in-out forwards;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes drawText {
+      0% {
+        stroke-dashoffset: 1000;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+
+  <!-- Definition for your vibrant gradient -->
+  <defs>
+    <linearGradient id="rainbow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4facfe" />
+      <stop offset="30%" stop-color="#f093fb" />
+      <stop offset="60%" stop-color="#f5576c" />
+      <stop offset="100%" stop-color="#43e97b" />
+    </linearGradient>
+  </defs>
+
+  <!-- The actual text element being animated -->
+  <text x="50%" y="60%" text-anchor="middle" class="draw-text" 
+        fill="transparent" 
+        stroke="url(#rainbow-gradient)" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round">
+    Let's get Started
+  </text>
+</svg>

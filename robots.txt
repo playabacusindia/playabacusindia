@@ -1,0 +1,13 @@
+# robots.txt for https://www.playabacusindia.com/
+User-agent: *
+Allow: /
+
+# Disallow administrative, backend, or private folders
+Disallow: /backend/
+Disallow: /cgi-bin/
+Disallow: /.git/
+Disallow: /404.html
+Disallow: /coming-soon.html
+
+# Canonical Sitemap Reference
+Sitemap: https://www.playabacusindia.com/sitemap.xml
