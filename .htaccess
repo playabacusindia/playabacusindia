@@ -7,6 +7,13 @@
   RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteRule ^ https://www.playabacusindia.com%{REQUEST_URI} [R=301,L]
 
+  # Redirect /india/ or /india/index.html to /india/abacus-in-india.html
+  RewriteRule ^india/?$ /india/abacus-in-india.html [R=301,L]
+  RewriteRule ^india/index\.html$ /india/abacus-in-india.html [R=301,L]
+
+  # Redirect legacy state paths missing /india/ prefix
+  RewriteRule ^(andaman-and-nicobar-islands|andhra-pradesh|delhi|gujarat|karnataka|kerala|maharashtra|puducherry|punjab|rajasthan|tamilnadu|telangana|west-bengal)(/.*)?$ /india/$1$2 [R=301,L,NC]
+
   DirectoryIndex index.html
   
   # Custom 404 Page
